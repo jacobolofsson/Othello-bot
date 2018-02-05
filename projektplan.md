@@ -12,9 +12,28 @@ I detta projekt ska vi konstruera en robot som kan spela othello mot en mänskli
 AI:t ska kunna få information om hur spelplanen ser ut, beräkna ett drag och sedan skicka information om hur draget ska utföras till en robotarm eller annan mekanism som utför draget på den fysiska spelplanen.
 
 ### Minsta fungerade produkt (MVP)
+Den minsta fungerande produkten vi har är en robot som kan läsa av spelplanen och göra ett slumpmässigt "lagligt" drag.
+* Roboten matas med pjäs av rätt färg från mänsklig spelare
+* AI:t spelar alltid som samma färg
+* AI:t har inget minne
+* AI:t utför ett drag efter extern input
+* Mäsnkliga motståndaren måste vända på pjäserna som påverkas av draget
+* Statuslampor visar i vilket state programmet är
+
+### Funktioner att lägga till efter MVP
+Eftert den minsta fungerande produkten har implementerats kommer följande funktioner läggas till:
+1. Det går att välja färg på AI:t
+1. Efter AI:t utfört ett drag vänder den alla pjäser som blir påverkade av draget
+1. AI:n gör "smarta" drag
+1. Möjlighet att ställa in betänketid och/eller svårighetsgrad
+1. Display som kan visa mer information om state
+1. AI:t känner av när motståndaren utfört sitt drag och fortsätter automatiskt med sitt drag utan input
+1. Möjlighet att ha två olika AI:n som spelar mot varandra
+1. Bygga två stycken robotar som spelar mot varandra
 
 ### Designval
 Följande val behöver göras för designen:
+
 #### Spelplan med sensor
 * Vilken storlek ska planen ha och hur många rutor ska det vara?
 * Vilken sorts sensor ska användas för att känna av färg/position av pjäser?
@@ -35,11 +54,17 @@ Följande val behöver göras för designen:
 * Vilken sorts motor ska användas?
 
 #### Mjukvara
+* Hur ska programmet struktureras?
+  * Hur ska interfacen mellan de olika programdelarna se ut?
 * Vilken AI-algorithm ska användas?
   * Monte Carlo
   * Min/max
+
+#### Hårdvara
+Valet av processor kommer att styras i stor del av hur mjukvaran, sensorn och hur förflyttningen och spelplanen designas.
 * Vad för sorts processor ska användas?
   * IC
   * Arduino
   * Raspberry Pi
   * Dator
+* Ska samma processor användas för AI, sensor och förflyttning eller ska separata processorer som kommunicerar med varandra användas?
