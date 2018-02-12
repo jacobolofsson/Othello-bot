@@ -1,4 +1,5 @@
 # Projektplan Elektromekaniskt projekt 2018
+5 hp projektarbete som del av civilingenjörsutbildningen i Teknisk fysik, inriktning inbyggda system.
 ## Deltagare
 * Jacob Olofsson
 * Thomas Danielsson
@@ -19,11 +20,13 @@ Den minsta fungerande produkten vi har är en robot som kan läsa av spelplanen 
 * AI:t utför ett drag efter extern input
 * Mäsnkliga motståndaren måste vända på pjäserna som påverkas av draget
 * Statuslampor visar i vilket state programmet är
+* Mekanismen ska gå att nollställas efter utfört eller misslyckat drag
 
 ### Funktioner att lägga till efter MVP
 Eftert den minsta fungerande produkten har implementerats kommer följande funktioner läggas till:
 1. Det går att välja färg på AI:t
 1. Efter AI:t utfört ett drag vänder den alla pjäser som blir påverkade av draget
+1. Mekanismen plockar upp nya pjäser utan mänsklig hjälp
 1. AI:n gör "smarta" drag
 1. Möjlighet att ställa in betänketid och/eller svårighetsgrad
 1. Display som kan visa mer information om state
@@ -68,3 +71,10 @@ Valet av processor kommer att styras i stor del av hur mjukvaran, sensorn och hu
   * Raspberry Pi
   * Dator
 * Ska samma processor användas för AI, sensor och förflyttning eller ska separata processorer som kommunicerar med varandra användas?
+
+## Skiss
+
+## Delar
+
+## Tidsplan
+
