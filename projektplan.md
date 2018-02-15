@@ -71,6 +71,7 @@ Valet av processor kommer att styras i stor del av hur mjukvaran, sensorn och hu
   * Raspberry Pi
   * Dator
 * Ska samma processor användas för AI, sensor och förflyttning eller ska separata processorer som kommunicerar med varandra användas?
+* Strömkälla
 
 ## Skiss
 
