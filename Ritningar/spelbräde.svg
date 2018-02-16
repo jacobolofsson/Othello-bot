@@ -20,6 +20,19 @@
    sodipodi:docname="spelbräde.svg">
   <defs
      id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient7159"
+       osb:paint="gradient">
+      <stop
+         style="stop-color:#f9f9f9;stop-opacity:1;"
+         offset="0"
+         id="stop7161" />
+      <stop
+         style="stop-color:#f9f9f9;stop-opacity:0;"
+         offset="1"
+         id="stop7163" />
+    </linearGradient>
     <marker
        inkscape:stockid="TriangleOutL"
        orient="auto"
@@ -443,6 +456,19 @@
          d="M 7.597,0.061 C 5.079,-0.187 2.656,0.302 -0.01,1.788 L -0.01,3.061 C 2.773,1.431 5.173,1.052 7.472,1.280 C 9.770,1.508 11.969,2.361 14.253,3.218 C 18.820,4.931 23.804,6.676 30.066,3.061 L 30.062,1.788 C 23.622,5.497 19.246,3.770 14.691,2.061 C 12.413,1.207 10.115,0.311 7.597,0.061 z "
          style="fill:black;stroke:none;" />
     </pattern>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5611"
+       x="-0.06"
+       width="1.12"
+       y="-0.06"
+       height="1.12">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.4"
+         id="feGaussianBlur5613" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -451,9 +477,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="358.0765"
-     inkscape:cy="508.23588"
+     inkscape:zoom="2"
+     inkscape:cx="183.15983"
+     inkscape:cy="119.84551"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -478,6 +504,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:3,3;stroke-dashoffset:0"
+       id="rect7185"
+       width="11"
+       height="26"
+       x="287"
+       y="878.36218" />
     <rect
        style="opacity:1;fill:url(#pattern5361);fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect6159"
@@ -2533,5 +2566,54 @@
          id="tspan5589"
          x="669.34296"
          y="140.19446">GND</tspan></text>
+    <circle
+       style="opacity:1;fill:#333333;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="path5591"
+       cx="59.5"
+       cy="889.36218"
+       r="35" />
+    <circle
+       r="8"
+       cy="889.36218"
+       cx="59.5"
+       id="circle5593"
+       style="opacity:1;fill:#999999;fill-opacity:1;stroke:#000000;stroke-opacity:1;filter:url(#filter5611)" />
+    <circle
+       r="35"
+       cy="889.36218"
+       cx="146.5"
+       id="circle7171"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#999999;fill-opacity:1;stroke:#000000;stroke-opacity:1;filter:url(#filter5611)"
+       id="circle7173"
+       cx="146.5"
+       cy="889.36218"
+       r="8" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text7175"
+       y="957.61627"
+       x="20.041632"
+       style="font-style:normal;font-weight:normal;font-size:27.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="957.61627"
+         x="20.041632"
+         id="tspan7177"
+         sodipodi:role="line">Spelpjäs</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect7179"
+       width="134"
+       height="25.5"
+       x="225.5"
+       y="878.36218" />
+    <rect
+       y="878.36218"
+       x="225.5"
+       height="13"
+       width="134"
+       id="rect7181"
+       style="opacity:0.479;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
   </g>
 </svg>
