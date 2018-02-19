@@ -85,7 +85,7 @@ Slutsats: För enkelhet bör samma processor användas till allt då det finns l
 Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att pjäserna inte ska kunna glida över till rutan brevid. Spelplanen är kopplad till en arduinos 8 digital out, 8 Analog in för multiplex av 64 sensorer. Spelplanen har även 1 digital in för knappen samt 4 digital out för LED kopplad till arduinon för I/O.
 <img src="./Ritningar/spelbräde.svg">
 ### Arm för att plocka upp pjäser
-<img src="./Ritningar/SkissEMP3StallningV3.svg">
+<img src="./Ritningar/SkissEMP3StallningV4.svg">
 ### Anordning för att flytta armen
 
 <img src="./Ritningar/lever.svg">
