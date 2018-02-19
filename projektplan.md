@@ -87,7 +87,9 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 ### Arm för att plocka upp pjäser
 Thomas, lägg in din skiss här
 ### Anordning för att flytta armen
+
 <img src="./Ritningar/lever.svg">
+
 ## Delar
 | Del | Benämning | Antal | Butik 1 | Butik 2 |
 | --- | --------- | ----- | ------- | ------- |
