@@ -84,17 +84,17 @@ Slutsats: För enkelhet bör samma processor användas till allt då det finns l
 Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att pjäserna inte ska kunna glida över till rutan brevid. Spelplanen är kopplad till en arduinos 8 digital out, 8 Analog in för multiplex av 64 sensorer. Spelplanen har även 1 digital in för knappen samt 4 digital out för LED kopplad till arduinon för I/O.
 <img src="./Ritningar/spelbräde.svg">
 ## Delar
-### Kontrollenhet
-1. Arduino Mega
-### Spelplan
-1. Linjär Halleffektsensor 64st, Allegro A1301 SIP-3 Hall-effektsensor 2.5mV/G
-1. Kabel 16st,(16x) 220cm
-1. Avdelare 14st, (14x) 1x24cm plastglas
-1. Plan 1st, 33x33cm plastglas
-1. Spelpjäs 64st, 45x45cm trä 
-1. Neodymmagnet 64st
-1. LED 4st
-1. Knapp 1st
-1. Gummifötter 4st
+| Del | Benämning | Antal | Butik 1 | Butik 2 |
+| --- | --------- | ----- | ------- | ------- |
+| 0.1 | Arduino Mega | 1st | x | y |
+| 1.1 | Linjär Halleffektsensor | 64st | https://www.electrokit.com/allegro-a1301-sip3-halleffektsensor-2-5mv-g.52933 | y |
+| 1.2 | Kopplingskabel | 16x220cm | x | y |
+| 1.3 | Avdelare, plastglas | 14x24cm | x | y |
+| 1.4 | Plan, plastglas | 33x33cm | x | y |
+| 1.5 | Spelpjäs, trä | 1x45x45cm | x | y | 
+| 1.6 | Neodymmagnet | 64st | x | y |
+| 1.7 | LED | 4st | x | y |
+| 1.8 | Knapp | 1st | x | y |
+| 1.9 | Gummifötter | 4st | x | y |
 ## Tidsplan
 
