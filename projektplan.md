@@ -75,9 +75,9 @@ Valet av processor kommer att styras i stor del av hur mjukvaran, sensorn och hu
 
 ## Skiss
 (8 digital out, 8 Analog in för multiplex av 64 sensorer. 1 digital in för knapp 4 digital out för LED
+![Alt text]<img src="./Ritningar/spelbräde.svg">
 ## Delar
 ### Spelplan
-<img src="./Ritningar/spelbräde.svg">
 1. Linjär Halleffektsensor 64st, Allegro A1301 SIP-3 Hall-effektsensor 2.5mV/G
 1. Kabel 16st,(16x) 220cm
 1. Avdelare 14st, (14x) 1x24cm plastglas
