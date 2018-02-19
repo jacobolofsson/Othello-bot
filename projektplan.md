@@ -104,5 +104,14 @@ Thomas, lägg till din skiss här
 | 1.9 | Kontakter | minst 22 poler | [Elfa](https://www.elfa.se/sv/stiftlist-hona-50-fischer-elektronik-mk01-50z/p/14384049?q=stiftlist&page=13&origPos=248&origPageSize=50&simi=99.63)  | [Electrokit](https://www.electrokit.com/stiftlist-2-54mm-1x40p-brytbar.43412) |
 | 1.10 | Gummifötter | 4st | [Electrokit](https://www.electrokit.com/gummifot-o11x5mm-gra.43380?sort=price_asc) | [Elfa](https://www.elfa.se/sv/gummifoetteroo-25-mm-11-mm-svart-reinshagen-1841/p/14886891?channel=b2c&price_gs=9.5125&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLlYWaRFKkrCeVBkSxIdsWjV9c2qDOGwhMzEP0Zd5aZWickX0hMJZ_4aAlyCEALw_wcB) |
 ## Tidsplan
-| Vad | Tidsåtgång | Deadline |
-| --- | ---------- | -------- |   
+| Vad | Tidsåtgång | Påbörjas senast | Färdigställt senast | Beroende av |
+| --- | ---------- | --------------- | ------------------- | ----------- |
+| Specifikation av hårdvaru/mjukvaruinterface | 1 dag | ASAP | 27/4 | Oberoende |
+| Programmera AI | 7 dagar | ASAP |  27/4 | Oberoende |
+| Konstruktion av spelplan | 1 dag | ASAP | 27/4 | Oberoende |
+| Konstruktion av spelpjäser | 1 dag | ASAP | 27/4 | Oberoende |
+| Koppla elektronik i spelplanen | 2 dagar | 28/4 | 30/4 | Specifikation av hw/sw interface, Konstruktion av spelplan|
+| Programmera styrprogram för elektroniken i spelplanen | 3 dagar | 30/4 | 3/5 | Specifikation av hw/sw interface | 
+| Felsöka elektronik i spelplanen | 4 dagar | 3/5 | 7/5 | Koppling av elektronik i spelplanen, styrprogram för spelplanen |
+| Testa och felsöka AI | 4 dagar | 7/5 | 11/5 | Programmera AI, felsöka elektronik i spelplanen |
+| Skriv rapport | 4 dagar | 11/5 | 15/5 | Allt ovan |  
