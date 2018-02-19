@@ -74,8 +74,18 @@ Valet av processor kommer att styras i stor del av hur mjukvaran, sensorn och hu
 * Strömkälla
 
 ## Skiss
-
+(8 digital out, 8 Analog in för multiplex av 64 sensorer. 1 digital in för knapp 4 digital out för LED
 ## Delar
+1. Spelplan
+  1. Linjär Halleffektsensor 64st, Allegro A1301 SIP-3 Hall-effektsensor 2.5mV/G
+  1. Kabel 16st,(16x) 220cm
+  1. Avdelare 14st, (14x) 1x24cm plastglas
+  1. Plan 1st, 33x33cm plastglas
+  1. Spelpjäs 64st, 45x45cm trä 
+  1. Gummifötter 4st,
+  1. Neodymmagnet 64st
+  1. LED 4st
+  1. Knapp 1st
 
 ## Tidsplan
 
