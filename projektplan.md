@@ -43,7 +43,7 @@ Följande val behöver göras för designen:
   * Kamera - Beräkna ljusstyrkan i varje punkt där en pjäs kan befinna sig
   * Fotosensor under planen - Planen görs i genomskinligt material med en fotosensor under
   * Elektrisk / magnetisk krets - Konstruera pjäserna så att de sluter olika kretsar när de placeras på planen
-
+Slutsats: Standard Othello spelas på 8x8. Varje ruta bör vara 3x3cm med en avskiljare som är max 1cm hög för att en mmänsklig spelare enkelt ska kunna lyfta upp och placera pjäser. Vi väljer att sätta linjära halleffektsensorer under planen och sätta magneter i spelpjäserna. Med en halleffektsensor går det att känna av riktning på magneten eller om en ruta är tom.
 #### Förflyttning av pjäser
 * Hur ska pjäserna plockas upp?
   * Elktromagnet
@@ -55,6 +55,7 @@ Följande val behöver göras för designen:
   * Vända på pjäserna?
   * Byta ut pjäserna?
 * Vilken sorts motor ska användas?
+Slutsats: Eftersom pjäserna har en magnet är det praktiskt att använda en elektromagnet för att plocka upp pjäserna. För att ha så få frihetsgrader i systemet som möjligt används en bana likt i en 3D-skrivare. För enkelhet i en första design kommer roboten varken att vända eller byta ut pjäser, detta lämnas till människospelaren. Stegmoterer bör användas för förflyttningen i sidled och en servomotor för upplockandet av pjäser.
 
 #### Mjukvara
 * Hur ska programmet struktureras?
@@ -62,6 +63,7 @@ Följande val behöver göras för designen:
 * Vilken AI-algorithm ska användas?
   * Monte Carlo
   * Min/max
+Slutsats: TBD
 
 #### Hårdvara
 Valet av processor kommer att styras i stor del av hur mjukvaran, sensorn och hur förflyttningen och spelplanen designas.
@@ -72,11 +74,14 @@ Valet av processor kommer att styras i stor del av hur mjukvaran, sensorn och hu
   * Dator
 * Ska samma processor användas för AI, sensor och förflyttning eller ska separata processorer som kommunicerar med varandra användas?
 * Strömkälla
+Slutsats: För enkelhet bör samma processor användas till allt då det finns lite att tjäna i att ha separat hårdvara för de olika delarna. Minst 8 analoga ingångar och 12 digitala utgångar krävs för designen och en någorlunda snabb processor. Förslagsvis en arduino Mega. Separata strömkällor bör användas till motorer och arduino för att minska störningar.
 
 ## Skiss
-(8 digital out, 8 Analog in för multiplex av 64 sensorer. 1 digital in för knapp 4 digital out för LED
-![Alt text]<img src="./Ritningar/spelbräde.svg">
+Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att pjäserna inte ska kunna glida över till rutan brevid. Spelplanen är kopplad till en arduinos 8 digital out, 8 Analog in för multiplex av 64 sensorer. Spelplanen har även 1 digital in för knapp 4 digital out för LED kopplad till arduinon för I/O.
+<img src="./Ritningar/spelbräde.svg">
 ## Delar
+### Kontrollenhet
+1. Arduino Mega
 ### Spelplan
 1. Linjär Halleffektsensor 64st, Allegro A1301 SIP-3 Hall-effektsensor 2.5mV/G
 1. Kabel 16st,(16x) 220cm
