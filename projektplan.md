@@ -81,8 +81,13 @@ Valet av processor kommer att styras i stor del av hur mjukvaran, sensorn och hu
 Slutsats: För enkelhet bör samma processor användas till allt då det finns lite att tjäna i att ha separat hårdvara för de olika delarna. Minst 8 analoga ingångar och 12 digitala utgångar krävs för designen och en någorlunda snabb processor. Förslagsvis en arduino Mega. Separata strömkällor bör användas till motorer och arduino för att minska störningar.
 
 ## Skiss
+### Spelplan
 Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att pjäserna inte ska kunna glida över till rutan brevid. Spelplanen är kopplad till en arduinos 8 digital out, 8 Analog in för multiplex av 64 sensorer. Spelplanen har även 1 digital in för knappen samt 4 digital out för LED kopplad till arduinon för I/O.
 <img src="./Ritningar/spelbräde.svg">
+### Arm för att plocka upp pjäser
+Aksel, lägg till din skiss här
+### Anordning för att flytta armen
+Thomas, lägg till din skiss här
 ## Delar
 | Del | Benämning | Antal | Butik 1 | Butik 2 |
 | --- | --------- | ----- | ------- | ------- |
@@ -95,8 +100,9 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 | 1.6 | Neodymmagnet 5mmx5mm | 64st | [Electrokit](https://www.electrokit.com/magnet-neo35-o5mm-x-5mm.50573) | [Elfa](https://www.elfa.se/en/bar-magnet-neo-35-sura-magnets-na35-005/p/13752011?q=neo+35+bar&page=4&origPos=4&origPageSize=25&simi=98.26) |
 | 1.7 | LED | 4st | [Elfa](https://www.elfa.se/sv/lysdiod-mm-t1-groen-kingbright-7104gd/p/17510161?q=led&sort=Price:asc&page=16&origPos=281&origPageSize=50&simi=99.71) | [Electrokit](https://www.electrokit.com/led-gron-3mm-lagstrom-2ma-tllg4401.44653) |
 | 1.8 | Vippa | 1st | [Elfa](https://www.elfa.se/sv/vippstroemstaellare-on-off-1p-starcote-k3/p/13500600?q=*&sort=Price:asc&filter_Buyable=1&filter_Category3=Vippstr%C3%B6mst%C3%A4llare&page=1&origPos=44&origPageSize=50&simi=99.65) | [Electrokit](https://www.electrokit.com/vippomkopplare-1pol-lodoron-onon-mts102.42011?sort=price_asc) |
-| 1.9 | Flatkabler | minst 22 poler | [Electrokit](https://www.electrokit.com/flatkabel-gra-26-ledare-1-27mm-m.44069) | [Elfa](https://www.elfa.se/sv/flatkabel-27-mm-25x0-08-mm-3m-3365-25/p/15566357?q=flatkabel&page=28&origPos=135&origPageSize=50&simi=99.65) |
+| 1.9 | Flatkabel | minst 22 poler | [Electrokit](https://www.electrokit.com/flatkabel-gra-26-ledare-1-27mm-m.44069) | [Elfa](https://www.elfa.se/sv/flatkabel-27-mm-25x0-08-mm-3m-3365-25/p/15566357?q=flatkabel&page=28&origPos=135&origPageSize=50&simi=99.65) |
 | 1.9 | Kontakter | minst 22 poler | [Elfa](https://www.elfa.se/sv/stiftlist-hona-50-fischer-elektronik-mk01-50z/p/14384049?q=stiftlist&page=13&origPos=248&origPageSize=50&simi=99.63)  | [Electrokit](https://www.electrokit.com/stiftlist-2-54mm-1x40p-brytbar.43412) |
 | 1.10 | Gummifötter | 4st | [Electrokit](https://www.electrokit.com/gummifot-o11x5mm-gra.43380?sort=price_asc) | [Elfa](https://www.elfa.se/sv/gummifoetteroo-25-mm-11-mm-svart-reinshagen-1841/p/14886891?channel=b2c&price_gs=9.5125&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLlYWaRFKkrCeVBkSxIdsWjV9c2qDOGwhMzEP0Zd5aZWickX0hMJZ_4aAlyCEALw_wcB) |
 ## Tidsplan
-
+| Vad | Tidsåtgång | Deadline |
+| --- | ---------- | -------- |   
