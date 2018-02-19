@@ -43,6 +43,7 @@ Följande val behöver göras för designen:
   * Kamera - Beräkna ljusstyrkan i varje punkt där en pjäs kan befinna sig
   * Fotosensor under planen - Planen görs i genomskinligt material med en fotosensor under
   * Elektrisk / magnetisk krets - Konstruera pjäserna så att de sluter olika kretsar när de placeras på planen
+
 Slutsats: Standard Othello spelas på 8x8. Varje ruta bör vara 3x3cm med en avskiljare som är max 1cm hög för att en mmänsklig spelare enkelt ska kunna lyfta upp och placera pjäser. Vi väljer att sätta linjära halleffektsensorer under planen och sätta magneter i spelpjäserna. Med en halleffektsensor går det att känna av riktning på magneten eller om en ruta är tom.
 #### Förflyttning av pjäser
 * Hur ska pjäserna plockas upp?
@@ -55,6 +56,7 @@ Slutsats: Standard Othello spelas på 8x8. Varje ruta bör vara 3x3cm med en avs
   * Vända på pjäserna?
   * Byta ut pjäserna?
 * Vilken sorts motor ska användas?
+
 Slutsats: Eftersom pjäserna har en magnet är det praktiskt att använda en elektromagnet för att plocka upp pjäserna. För att ha så få frihetsgrader i systemet som möjligt används en bana likt i en 3D-skrivare. För enkelhet i en första design kommer roboten varken att vända eller byta ut pjäser, detta lämnas till människospelaren. Stegmoterer bör användas för förflyttningen i sidled och en servomotor för upplockandet av pjäser.
 
 #### Mjukvara
@@ -63,6 +65,7 @@ Slutsats: Eftersom pjäserna har en magnet är det praktiskt att använda en ele
 * Vilken AI-algorithm ska användas?
   * Monte Carlo
   * Min/max
+
 Slutsats: TBD
 
 #### Hårdvara
@@ -74,6 +77,7 @@ Valet av processor kommer att styras i stor del av hur mjukvaran, sensorn och hu
   * Dator
 * Ska samma processor användas för AI, sensor och förflyttning eller ska separata processorer som kommunicerar med varandra användas?
 * Strömkälla
+
 Slutsats: För enkelhet bör samma processor användas till allt då det finns lite att tjäna i att ha separat hårdvara för de olika delarna. Minst 8 analoga ingångar och 12 digitala utgångar krävs för designen och en någorlunda snabb processor. Förslagsvis en arduino Mega. Separata strömkällor bör användas till motorer och arduino för att minska störningar.
 
 ## Skiss
@@ -91,6 +95,6 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 1. Neodymmagnet 64st
 1. LED 4st
 1. Knapp 1st
-1. Gummifötter 4st,
+1. Gummifötter 4st
 ## Tidsplan
 
