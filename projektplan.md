@@ -86,15 +86,17 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 ## Delar
 | Del | Benämning | Antal | Butik 1 | Butik 2 |
 | --- | --------- | ----- | ------- | ------- |
-| 0.1 | Arduino Mega | 1st | x | y |
-| 1.1 | Linjär Halleffektsensor | 64st | https://www.electrokit.com/allegro-a1301-sip3-halleffektsensor-2-5mv-g.52933 | y |
-| 1.2 | Kopplingskabel | 16x220cm | x | y |
-| 1.3 | Avdelare, plastglas | 14x24cm | x | y |
-| 1.4 | Plan, plastglas | 33x33cm | x | y |
-| 1.5 | Spelpjäs, trä | 1x45x45cm | x | y | 
-| 1.6 | Neodymmagnet | 64st | x | y |
-| 1.7 | LED | 4st | x | y |
-| 1.8 | Knapp | 1st | x | y |
-| 1.9 | Gummifötter | 4st | x | y |
+| 0.1 | Arduino Mega | 1st | [Elfa](https://www.elfa.se/sv/mikrostyrenhetskort-mega2560-r3-a000067-atmega2560-arduino-a000067/p/11038920?channel=b2c&price_gs=437.5&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLnJw6LyRBOy0xbVTKBopU4j0G5_wbOAGRTQvv3c3tdgh4Iv977cjsgaAhNxEALw_wcB) | [Conrad](https://www.conrad.se/?websale8=conrad-swe&pi=191790&ws_tp1=cp&ref=kelkoo&subref=191790&utm_source=kelkoo&utm_medium=cpc&utm_campaign=kelkoo_feed&utm_content=191790) |
+| 1.1 | Linjär Halleffektsensor | 64st | [Electrokit](https://www.electrokit.com/allegro-a1301-sip3-halleffektsensor-2-5mv-g.52933) | [Elfa](https://www.elfa.se/en/low-noise-linear-sensor-sip-allegro-a1326lua/p/17333935?q=hall+analog&page=1&origPos=1&origPageSize=25&simi=95.19) | 
+| 1.2 | Kopplingskabel | 16x220cm | [Electrokit](https://www.electrokit.com/kopplingstrad-0-05mm%25C2%25B2-50m-svart.54262)  | [Elfa](https://www.elfa.se/sv/kopplingstrad-50-mm-svart-tinned-copper-silikon-rnd-cable-rnd-475-00485/p/30090251?q=kopplingstr%C3%A5d&page=3&origPos=25&origPageSize=50&simi=99.98) |
+| 1.3 | Avdelare, plastglas | 14x24cm | [Biltema](http://www.biltema.se/sv/Bygg/Ovrigt/Plastglas-2000030030/) | [Jula](https://www.jula.se/catalog/bygg-och-farg/beslag/inredningsbeslag/plastskivor/akrylplast-341071?gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLknfkM98twJ0wUkssHdzIcDK2rWlab4vHQ5O6F3Wj3-UlX249CZlf4aAm6iEALw_wcB) |
+| 1.4 | Plan, plastglas | 33x33cm | [Biltema](http://www.biltema.se/sv/Bygg/Ovrigt/Plastglas-2000030030/)| [Jula](https://www.jula.se/catalog/bygg-och-farg/beslag/inredningsbeslag/plastskivor/akrylplast-341071?gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLknfkM98twJ0wUkssHdzIcDK2rWlab4vHQ5O6F3Wj3-UlX249CZlf4aAm6iEALw_wcB) |
+| 1.5 | Spelpjäs, trä | 1x45x45cm | [Bauhaus](https://www.bauhaus.se/mdf-skiva-10mm-10x1220x2440mm.html) | [Byggmax](https://www.byggmax.se/skivmaterial/byggskivor/mdf/mdf-p10082) | 
+| 1.6 | Neodymmagnet 5mmx5mm | 64st | [Electrokit](https://www.electrokit.com/magnet-neo35-o5mm-x-5mm.50573) | [Elfa](https://www.elfa.se/en/bar-magnet-neo-35-sura-magnets-na35-005/p/13752011?q=neo+35+bar&page=4&origPos=4&origPageSize=25&simi=98.26) |
+| 1.7 | LED | 4st | [Elfa](https://www.elfa.se/sv/lysdiod-mm-t1-groen-kingbright-7104gd/p/17510161?q=led&sort=Price:asc&page=16&origPos=281&origPageSize=50&simi=99.71) | [Electrokit](https://www.electrokit.com/led-gron-3mm-lagstrom-2ma-tllg4401.44653) |
+| 1.8 | Vippa | 1st | [Elfa](https://www.elfa.se/sv/vippstroemstaellare-on-off-1p-starcote-k3/p/13500600?q=*&sort=Price:asc&filter_Buyable=1&filter_Category3=Vippstr%C3%B6mst%C3%A4llare&page=1&origPos=44&origPageSize=50&simi=99.65) | [Electrokit](https://www.electrokit.com/vippomkopplare-1pol-lodoron-onon-mts102.42011?sort=price_asc) |
+| 1.9 | Flatkabler | minst 22 poler | [Electrokit](https://www.electrokit.com/flatkabel-gra-26-ledare-1-27mm-m.44069) | [Elfa](https://www.elfa.se/sv/flatkabel-27-mm-25x0-08-mm-3m-3365-25/p/15566357?q=flatkabel&page=28&origPos=135&origPageSize=50&simi=99.65) |
+| 1.9 | Kontakter | minst 22 poler | [Elfa](https://www.elfa.se/sv/stiftlist-hona-50-fischer-elektronik-mk01-50z/p/14384049?q=stiftlist&page=13&origPos=248&origPageSize=50&simi=99.63)  | [Electrokit](https://www.electrokit.com/stiftlist-2-54mm-1x40p-brytbar.43412) |
+| 1.10 | Gummifötter | 4st | [Electrokit](https://www.electrokit.com/gummifot-o11x5mm-gra.43380?sort=price_asc) | [Elfa](https://www.elfa.se/sv/gummifoetteroo-25-mm-11-mm-svart-reinshagen-1841/p/14886891?channel=b2c&price_gs=9.5125&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLlYWaRFKkrCeVBkSxIdsWjV9c2qDOGwhMzEP0Zd5aZWickX0hMJZ_4aAlyCEALw_wcB) |
 ## Tidsplan
 
