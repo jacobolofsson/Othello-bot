@@ -117,11 +117,11 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 | 2.9 | Batterieliminator | 1st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/stromforsorjning/nataggregat/ac-dc/stallbar-utspanning/stallbar-natadapter-3-12-v-(dc)-3-6-w-p44108) | [Electrokit](https://www.electrokit.com/batterieliminator-12v-2a.50115) |
 | 2.10 | LCD | 1st | [Electrokit](https://www.electrokit.com/lcd-2x16-tecken-jhd162a-stn-bla-vit-led.44837) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/elektronik/optokomponenter/led-lcd-displayer/luxorparts-lcd-display-2x16-seriell-i2c-p90786) |
 | 2.11 | Kuggremsskiva 5mm | 1st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-5mm.55066) |  | |
-| 3.1 | Benämning | Antal | Butik 1 | Butik 2 | Artikelnumer | Pris |
+| 3.1 | Servo | 1st | [Elektrokit](https://www.electrokit.com/hs422-standard-servo-0-4nm.44887?gclid=Cj0KCQiAw9nUBRCTARIsAG11eifNG8zzWkPj8r0Kc3eKOxAPi11XQ6DhI2Vbq2mJi5FygrwZvBIgP5saAr8xEALw_wcB)  | Butik 2 | 41002565 | 135 |
 | 3.2 | Metalstav 10mm x 20cm | 1st | [Creative Company](https://www.cchobby.se/metallstang-dia-2-mm-l-10-cm-10st) |  [Monatno](http://www.montano.se/product.html/kalldragen-rundstang?category_id=24) | 58022 / Kompaxel S355J2G3C+C | 19/21 |
 | 3.3 | Elektromagnet (ur relä) | 1st | [Elektrokit](https://www.electrokit.com/relaer.c148?gclid=Cj0KCQiAw9nUBRCTARIsAG11eidET_rIm1BAinoYusk1WUzJ9FTURTkSJ2dHIQl1eEgPIBIAjg2zjB0aAtC0EALw_wcB) | [Kjell&Company](https://www.kjell.com/se/sortiment/hem-kontor-fritid/larm-sakerhet-overvakning/larm/detektorer-sensorer-brytare/universalrela-12-24-v-2-a-24-v-p50602?gclid=Cj0KCQiAw9nUBRCTARIsAG11eid2oboUwZXbt1fyGYr25NYxS5U4X3cYwtXtuOyaCkSFj037lH0Y_7gaAhtHEALw_wcB) | 41003940 / 50602  | 24/99 |
-| 3.4.1 | Skruv 5mm | 2st | [Ahlsel](https://www.ahlsell.se/10/infastning/maskingangad-skruv/maskinskruv-rostfri/479517/) | Butik 2 | 479517  |  |
-| 3.4.2 | Mutter 5mm | 2st | [Ahlsell](https://www.ahlsell.se/10/infastning/mutter/mutter-blankforzinkad/500291/) | Butik 2 | 500291 | Pris |
+| 3.4.1 | Skruv 5mm | 2st | [Ahlsel](https://www.ahlsell.se/10/infastning/maskingangad-skruv/maskinskruv-rostfri/479517/) | Butik 2 | 479517  | krävde inloggning |
+| 3.4.2 | Mutter 5mm | 2st | [Ahlsell](https://www.ahlsell.se/10/infastning/mutter/mutter-blankforzinkad/500291/) | Butik 2 | 500291 | Krävde inloggning |
 ## Tidsplan
 | Vad | Tidsåtgång | Påbörjas senast | Färdigställt senast | Beroende av |
 | --- | ---------- | --------------- | ------------------- | ----------- |
