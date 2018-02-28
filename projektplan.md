@@ -3,7 +3,7 @@
 ## Deltagare
 * Jacob Olofsson
 * Thomas Danielsson
-* Aksel Wennström
+* Aksel Wännström
 
 ## Design
 I detta projekt ska vi konstruera en robot som kan spela othello mot en mänsklig motståndare. Vi har delat upp designen i tre stycken huvuddelar:
@@ -23,7 +23,7 @@ Den minsta fungerande produkten vi har är en robot som kan läsa av spelplanen 
 * Mekanismen ska gå att nollställas efter utfört eller misslyckat drag
 
 ### Funktioner att lägga till efter MVP
-Eftert den minsta fungerande produkten har implementerats kommer följande funktioner läggas till:
+Efter den minsta fungerande produkten har implementerats kommer följande funktioner läggas till:
 1. Det går att välja färg på AI:t
 1. Efter AI:t utfört ett drag vänder den alla pjäser som blir påverkade av draget
 1. Mekanismen plockar upp nya pjäser utan mänsklig hjälp
@@ -44,7 +44,7 @@ Följande val behöver göras för designen:
   * Fotosensor under planen - Planen görs i genomskinligt material med en fotosensor under
   * Elektrisk / magnetisk krets - Konstruera pjäserna så att de sluter olika kretsar när de placeras på planen
 
-Slutsats: Standard Othello spelas på 8x8. Varje ruta bör vara 3x3cm med en avskiljare som är max 1cm hög för att en mmänsklig spelare enkelt ska kunna lyfta upp och placera pjäser. Vi väljer att sätta linjära halleffektsensorer under planen och sätta magneter i spelpjäserna. Med en halleffektsensor går det att känna av riktning på magneten eller om en ruta är tom.
+Slutsats: Standard Othello spelas på 8x8. Varje ruta bör vara 3x3cm med en avskiljare som är max 1cm hög för att en mänsklig spelare enkelt ska kunna lyfta upp och placera pjäser. Vi väljer att sätta linjära halleffektsensorer under planen och sätta magneter i spelpjäserna. Med en halleffektsensor går det att känna av riktning på magneten eller om en ruta är tom.
 #### Förflyttning av pjäser
 * Hur ska pjäserna plockas upp?
   * Elktromagnet
@@ -92,7 +92,7 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 <img src="./Ritningar/lever.svg" width = "400">
 
 ## Delar
-| Del | Benämning | Antal | Butik 1 | Butik 2 | Artikelnumer | Pris |
+| Del | Benämning | Antal | Butik 1 | Butik 2 | Artikelnumer | Pris/sek |
 | --- | --------- | ----- | ------- | ------- | ------------ | ---- |
 | 0.1 | Arduino Mega | 1st | [Elfa](https://www.elfa.se/sv/mikrostyrenhetskort-mega2560-r3-a000067-atmega2560-arduino-a000067/p/11038920?channel=b2c&price_gs=437.5&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLnJw6LyRBOy0xbVTKBopU4j0G5_wbOAGRTQvv3c3tdgh4Iv977cjsgaAhNxEALw_wcB) | [Conrad](https://www.conrad.se/?websale8=conrad-swe&pi=191790&ws_tp1=cp&ref=kelkoo&subref=191790&utm_source=kelkoo&utm_medium=cpc&utm_campaign=kelkoo_feed&utm_content=191790) |  #### |  ### |
 | 1.1 | Linjär Halleffektsensor | 64st | [Electrokit](https://www.electrokit.com/allegro-a1301-sip3-halleffektsensor-2-5mv-g.52933) | [Elfa](https://www.elfa.se/en/low-noise-linear-sensor-sip-allegro-a1326lua/p/17333935?q=hall+analog&page=1&origPos=1&origPageSize=25&simi=95.19) | 
@@ -116,7 +116,12 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 | 2.8 | Stegmotordrivare | 1st | [Electrokit](https://www.electrokit.com/dubbel-stegmotordrivare-for-arduino.53090) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/moduler/stegmotordrivare-1-2-a-p88218) |
 | 2.9 | Batterieliminator | 1st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/stromforsorjning/nataggregat/ac-dc/stallbar-utspanning/stallbar-natadapter-3-12-v-(dc)-3-6-w-p44108) | [Electrokit](https://www.electrokit.com/batterieliminator-12v-2a.50115) |
 | 2.10 | LCD | 1st | [Electrokit](https://www.electrokit.com/lcd-2x16-tecken-jhd162a-stn-bla-vit-led.44837) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/elektronik/optokomponenter/led-lcd-displayer/luxorparts-lcd-display-2x16-seriell-i2c-p90786) |
-| 2.11 | Kuggremsskiva 5mm | 1st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-5mm.55066) |  |
+| 2.11 | Kuggremsskiva 5mm | 1st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-5mm.55066) |  | |
+| 3.1 | Benämning | Antal | Butik 1 | Butik 2 | Artikelnumer | Pris |
+| 3.2 | Metalstav 10mm x 20cm | 1st | [Creative Company](https://www.cchobby.se/metallstang-dia-2-mm-l-10-cm-10st) |  [Monatno](http://www.montano.se/product.html/kalldragen-rundstang?category_id=24) | 58022 / Kompaxel S355J2G3C+C | 19/21 |
+| 3.3 | Elektromagnet (ur relä) | 1st | [Elektrokit](https://www.electrokit.com/relaer.c148?gclid=Cj0KCQiAw9nUBRCTARIsAG11eidET_rIm1BAinoYusk1WUzJ9FTURTkSJ2dHIQl1eEgPIBIAjg2zjB0aAtC0EALw_wcB) | [Kjell&Company](https://www.kjell.com/se/sortiment/hem-kontor-fritid/larm-sakerhet-overvakning/larm/detektorer-sensorer-brytare/universalrela-12-24-v-2-a-24-v-p50602?gclid=Cj0KCQiAw9nUBRCTARIsAG11eid2oboUwZXbt1fyGYr25NYxS5U4X3cYwtXtuOyaCkSFj037lH0Y_7gaAhtHEALw_wcB) | 41003940 / 50602  | 24/99 |
+| 3.4.1 | Skruv 5mm | 2st | [Ahlsel](https://www.ahlsell.se/10/infastning/maskingangad-skruv/maskinskruv-rostfri/479517/) | Butik 2 | 479517  |  |
+| 3.4.2 | Mutter 5mm | 2st | [Ahlsell](https://www.ahlsell.se/10/infastning/mutter/mutter-blankforzinkad/500291/) | Butik 2 | 500291 | Pris |
 ## Tidsplan
 | Vad | Tidsåtgång | Påbörjas senast | Färdigställt senast | Beroende av |
 | --- | ---------- | --------------- | ------------------- | ----------- |
