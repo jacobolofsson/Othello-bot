@@ -86,10 +86,10 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 <img src="./Ritningar/spelbräde.svg">
 
 ### Anordning för att flytta armen
-<img src="./Ritningar/SkissEMP3StallningV4.svg" | width = 200>
+<img src="./Ritningar/SkissEMP3StallningV4.svg" width ="200">
 
 ### Arm för att plocka upp pjäser
-<img src="./Ritningar/lever.svg" | width = 200>
+<img src="./Ritningar/lever.svg" | width = "200">
 
 ## Delar
 | Del | Benämning | Antal | Butik 1 | Butik 2 |
