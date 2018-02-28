@@ -92,9 +92,9 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 <img src="./Ritningar/lever.svg" width = "400">
 
 ## Delar
-| Del | Benämning | Antal | Butik 1 | Butik 2 |
-| --- | --------- | ----- | ------- | ------- |
-| 0.1 | Arduino Mega | 1st | [Elfa](https://www.elfa.se/sv/mikrostyrenhetskort-mega2560-r3-a000067-atmega2560-arduino-a000067/p/11038920?channel=b2c&price_gs=437.5&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLnJw6LyRBOy0xbVTKBopU4j0G5_wbOAGRTQvv3c3tdgh4Iv977cjsgaAhNxEALw_wcB) | [Conrad](https://www.conrad.se/?websale8=conrad-swe&pi=191790&ws_tp1=cp&ref=kelkoo&subref=191790&utm_source=kelkoo&utm_medium=cpc&utm_campaign=kelkoo_feed&utm_content=191790) |
+| Del | Benämning | Antal | Butik 1 | Butik 2 | Artikelnumer | Pris |
+| --- | --------- | ----- | ------- | ------- | ------------ | ---- |
+| 0.1 | Arduino Mega | 1st | [Elfa](https://www.elfa.se/sv/mikrostyrenhetskort-mega2560-r3-a000067-atmega2560-arduino-a000067/p/11038920?channel=b2c&price_gs=437.5&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLnJw6LyRBOy0xbVTKBopU4j0G5_wbOAGRTQvv3c3tdgh4Iv977cjsgaAhNxEALw_wcB) | [Conrad](https://www.conrad.se/?websale8=conrad-swe&pi=191790&ws_tp1=cp&ref=kelkoo&subref=191790&utm_source=kelkoo&utm_medium=cpc&utm_campaign=kelkoo_feed&utm_content=191790) |  #### |  ### |
 | 1.1 | Linjär Halleffektsensor | 64st | [Electrokit](https://www.electrokit.com/allegro-a1301-sip3-halleffektsensor-2-5mv-g.52933) | [Elfa](https://www.elfa.se/en/low-noise-linear-sensor-sip-allegro-a1326lua/p/17333935?q=hall+analog&page=1&origPos=1&origPageSize=25&simi=95.19) | 
 | 1.2 | Kopplingskabel | 16x220cm | [Electrokit](https://www.electrokit.com/kopplingstrad-0-05mm%25C2%25B2-50m-svart.54262)  | [Elfa](https://www.elfa.se/sv/kopplingstrad-50-mm-svart-tinned-copper-silikon-rnd-cable-rnd-475-00485/p/30090251?q=kopplingstr%C3%A5d&page=3&origPos=25&origPageSize=50&simi=99.98) |
 | 1.3 | Avdelare, plastglas | 14x24cm | [Biltema](http://www.biltema.se/sv/Bygg/Ovrigt/Plastglas-2000030030/) | [Jula](https://www.jula.se/catalog/bygg-och-farg/beslag/inredningsbeslag/plastskivor/akrylplast-341071?gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLknfkM98twJ0wUkssHdzIcDK2rWlab4vHQ5O6F3Wj3-UlX249CZlf4aAm6iEALw_wcB) |
