@@ -3,7 +3,7 @@
 ## Deltagare
 * Jacob Olofsson
 * Thomas Danielsson
-* Aksel Wennström
+* Aksel Wännström
 
 ## Design
 I detta projekt ska vi konstruera en robot som kan spela othello mot en mänsklig motståndare. Vi har delat upp designen i tre stycken huvuddelar:
@@ -23,7 +23,7 @@ Den minsta fungerande produkten vi har är en robot som kan läsa av spelplanen 
 * Mekanismen ska gå att nollställas efter utfört eller misslyckat drag
 
 ### Funktioner att lägga till efter MVP
-Eftert den minsta fungerande produkten har implementerats kommer följande funktioner läggas till:
+Efter den minsta fungerande produkten har implementerats kommer följande funktioner läggas till:
 1. Det går att välja färg på AI:t
 1. Efter AI:t utfört ett drag vänder den alla pjäser som blir påverkade av draget
 1. Mekanismen plockar upp nya pjäser utan mänsklig hjälp
@@ -44,7 +44,7 @@ Följande val behöver göras för designen:
   * Fotosensor under planen - Planen görs i genomskinligt material med en fotosensor under
   * Elektrisk / magnetisk krets - Konstruera pjäserna så att de sluter olika kretsar när de placeras på planen
 
-Slutsats: Standard Othello spelas på 8x8. Varje ruta bör vara 3x3cm med en avskiljare som är max 1cm hög för att en mmänsklig spelare enkelt ska kunna lyfta upp och placera pjäser. Vi väljer att sätta linjära halleffektsensorer under planen och sätta magneter i spelpjäserna. Med en halleffektsensor går det att känna av riktning på magneten eller om en ruta är tom.
+Slutsats: Standard Othello spelas på 8x8. Varje ruta bör vara 3x3cm med en avskiljare som är max 1cm hög för att en mänsklig spelare enkelt ska kunna lyfta upp och placera pjäser. Vi väljer att sätta linjära halleffektsensorer under planen och sätta magneter i spelpjäserna. Med en halleffektsensor går det att känna av riktning på magneten eller om en ruta är tom.
 #### Förflyttning av pjäser
 * Hur ska pjäserna plockas upp?
   * Elktromagnet
@@ -87,18 +87,16 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 <img src="./Ritningar/spelbräde.svg">
 
 ### Anordning för att flytta armen
-
-<img src="./Ritningar/SkissEMP3StallningV4.svg">
+<img src="./Ritningar/SkissEMP3StallningV4.svg" width ="400">
 
 ### Arm för att plocka upp pjäser
 Vändnings armen är en servo motor kopplad till två metal armar vartpå det sitter en electromagnet. Denna mekanism är det som kommer att plocka up och lägga ner pjäserna för Othello spelet. 
-
-<img src="./Ritningar/lever.svg">
+<img src="./Ritningar/lever.svg" width = "400">
 
 ## Delar
-| Del | Benämning | Antal | Butik 1 | Butik 2 |
-| --- | --------- | ----- | ------- | ------- |
-| 0.1 | Arduino Mega | 1st | [Elfa](https://www.elfa.se/sv/mikrostyrenhetskort-mega2560-r3-a000067-atmega2560-arduino-a000067/p/11038920?channel=b2c&price_gs=437.5&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLnJw6LyRBOy0xbVTKBopU4j0G5_wbOAGRTQvv3c3tdgh4Iv977cjsgaAhNxEALw_wcB) | [Conrad](https://www.conrad.se/?websale8=conrad-swe&pi=191790&ws_tp1=cp&ref=kelkoo&subref=191790&utm_source=kelkoo&utm_medium=cpc&utm_campaign=kelkoo_feed&utm_content=191790) |
+| Del | Benämning | Antal | Butik 1 | Butik 2 | Artikelnumer | Pris/sek ink moms |
+| --- | --------- | ----- | ------- | ------- | ------------ | ---- |
+| 0.1 | Arduino Mega | 1st | [Elfa](https://www.elfa.se/sv/mikrostyrenhetskort-mega2560-r3-a000067-atmega2560-arduino-a000067/p/11038920?channel=b2c&price_gs=437.5&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLnJw6LyRBOy0xbVTKBopU4j0G5_wbOAGRTQvv3c3tdgh4Iv977cjsgaAhNxEALw_wcB) | [Conrad](https://www.conrad.se/?websale8=conrad-swe&pi=191790&ws_tp1=cp&ref=kelkoo&subref=191790&utm_source=kelkoo&utm_medium=cpc&utm_campaign=kelkoo_feed&utm_content=191790) |  #### |  ### |
 | 1.1 | Linjär Halleffektsensor | 64st | [Electrokit](https://www.electrokit.com/allegro-a1301-sip3-halleffektsensor-2-5mv-g.52933) | [Elfa](https://www.elfa.se/en/low-noise-linear-sensor-sip-allegro-a1326lua/p/17333935?q=hall+analog&page=1&origPos=1&origPageSize=25&simi=95.19) | 
 | 1.2 | Kopplingskabel | 16x220cm | [Electrokit](https://www.electrokit.com/kopplingstrad-0-05mm%25C2%25B2-50m-svart.54262)  | [Elfa](https://www.elfa.se/sv/kopplingstrad-50-mm-svart-tinned-copper-silikon-rnd-cable-rnd-475-00485/p/30090251?q=kopplingstr%C3%A5d&page=3&origPos=25&origPageSize=50&simi=99.98) |
 | 1.3 | Avdelare, plastglas | 14x24cm | [Biltema](http://www.biltema.se/sv/Bygg/Ovrigt/Plastglas-2000030030/) | [Jula](https://www.jula.se/catalog/bygg-och-farg/beslag/inredningsbeslag/plastskivor/akrylplast-341071?gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLknfkM98twJ0wUkssHdzIcDK2rWlab4vHQ5O6F3Wj3-UlX249CZlf4aAm6iEALw_wcB) |
@@ -125,6 +123,25 @@ Vändnings armen är en servo motor kopplad till två metal armar vartpå det si
 | 3.2 | Metal rod | 1st | x | y | 
 | 3.3 | Electromagnet | 1st | x | y |
 | 3.4 | Screw for micro servo SG92R | 2st | x | y |
+| 2.1 | Kuggremsskiva 6mm | 4st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-6mm.51634) | |41012369 |79|
+| 2.2 | Kuggrem | 3m | [Electrokit](https://www.electrokit.com/kuggrem-xl-3-8-m.51829) | |41012621 |39/m
+| 2.3 | Kullager(lagerbock) | 4st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) | | 41012042|59
+| 2.4 | Stegmotor | 2st | [Electrokit](https://www.electrokit.com/stegmotor-200-steg-varv-bipolar.45270) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/tillbehor/luxorparts-stegmotor-nema-17-p90776) | 41002881/90776| 199/179
+| 2.5 | Axel 6mm | 3st | [Electrokit](https://www.electrokit.com/axel-rostfritt-stal-6mm-x-300mm.53001) | |41013801 |49|
+| 2.6 | Glidlager(lagerbock)6mm | 8st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) |  |41012042 |59|
+| 2.7 | Ställning för stegmotor | 2st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/tillbehor/luxorparts-stegmotorhallare-nema-17-p90779) |  |90779| 39,9
+| 2.8 | Stegmotordrivare(helst electrokit) | 1st | [Electrokit](https://www.electrokit.com/dubbel-stegmotordrivare-for-arduino.53090) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/moduler/stegmotordrivare-1-2-a-p88218) | 41013873/88218|199/119|
+| 2.9 | Batterieliminator | 1st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/stromforsorjning/nataggregat/ac-dc/stallbar-utspanning/stallbar-natadapter-3-12-v-(dc)-3-6-w-p44108) | [Electrokit](https://www.electrokit.com/batterieliminator-12v-2a.50115) |44108/41011018|129,9/169|
+| 2.10 | LCD | 1st | [Electrokit](https://www.electrokit.com/lcd-2x16-tecken-jhd162a-stn-bla-vit-led.44837) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/elektronik/optokomponenter/led-lcd-displayer/luxorparts-lcd-display-2x16-seriell-i2c-p90786) |41002513/90786|99/119,9|
+| 2.11 | Kuggremsskiva 5mm | 1st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-5mm.55066) |  |41015850 |79|
+| 2.12 | Hållare ram | 4st | [??](url) | [??](url) | ||
+| 2.13 | Plattor | 3st | [??](url) | [??](url) | ||
+| 3.1 | Servo | 1st | [Elektrokit](https://www.electrokit.com/hs422-standard-servo-0-4nm.44887?gclid=Cj0KCQiAw9nUBRCTARIsAG11eifNG8zzWkPj8r0Kc3eKOxAPi11XQ6DhI2Vbq2mJi5FygrwZvBIgP5saAr8xEALw_wcB)  | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/elektronik/rc-tillbehor/tillbehor-servo-mottagare/luxorparts-s3003-standard-servo-4-1-kg-1-pack-p87902) | 41002565/87902 | 135/129:90 |
+| 3.2 | Metalstav 10mm x 20cm | 1st | [Creative Company](https://www.cchobby.se/metallstang-dia-2-mm-l-10-cm-10st) |  [Monatno](http://www.montano.se/product.html/kalldragen-rundstang?category_id=24) | 58022 / Kompaxel S355J2G3C+C | 19/21 |
+| 3.3 | Elektromagnet (ur relä) | 1st | [Elektrokit](https://www.electrokit.com/relaer.c148?gclid=Cj0KCQiAw9nUBRCTARIsAG11eidET_rIm1BAinoYusk1WUzJ9FTURTkSJ2dHIQl1eEgPIBIAjg2zjB0aAtC0EALw_wcB) | [Kjell&Company](https://www.kjell.com/se/sortiment/hem-kontor-fritid/larm-sakerhet-overvakning/larm/detektorer-sensorer-brytare/universalrela-12-24-v-2-a-24-v-p50602?gclid=Cj0KCQiAw9nUBRCTARIsAG11eid2oboUwZXbt1fyGYr25NYxS5U4X3cYwtXtuOyaCkSFj037lH0Y_7gaAhtHEALw_wcB) | 41003940 / 50602  | 24/99 |
+| 3.4.1 | Skruv 5mm | 2st | [Ahlsel](https://www.ahlsell.se/10/infastning/maskingangad-skruv/maskinskruv-rostfri/479517/) | [Elektrokit](https://www.electrokit.com/skruv-ph-m3x10.49898?gclid=Cj0KCQiAieTUBRCaARIsAHeLDCTHksfEjHzdUUufzUYZXg5MVNUemarirU2jP6VS5_o9bwWOxnyNzJkaArHSEALw_wcB) | 479517/41010773  | krävde inloggning/2.15 |
+| 3.4.2 | Mutter 5mm | 2st | [Ahlsell](https://www.ahlsell.se/10/infastning/mutter/mutter-blankforzinkad/500291/) | [Elektrokit](https://www.electrokit.com/mutter-m3.49909) | 500291/41010787 | Krävde inloggning/ 0.70 |
+
 ## Tidsplan
 | Vad | Tidsåtgång | Påbörjas senast | Färdigställt senast | Beroende av |
 | --- | ---------- | --------------- | ------------------- | ----------- |
