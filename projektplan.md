@@ -88,7 +88,7 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 
 ### Anordning för att flytta armen
 <img src="./Ritningar/SkissEMP3StallningV4.svg" width ="400">
-<img src="./Ritningar/TestStällningar.svg">
+<img src="./Ritningar/TestStällning.svg">
 
 ### Arm för att plocka upp pjäser
 Vändnings armen är en servo motor kopplad till två metal armar vartpå det sitter en electromagnet. Denna mekanism är det som kommer att plocka up och lägga ner pjäserna för Othello spelet. 
