@@ -113,7 +113,7 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 | 2.5 | Axel 6mm | 3st | [Electrokit](https://www.electrokit.com/axel-rostfritt-stal-6mm-x-300mm.53001) | |41013801 |49|
 | 2.6 | Glidlager(lagerbock)6mm | 8st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) |  |41012042 |59|
 | 2.7 | Ställning för stegmotor | 2st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/tillbehor/luxorparts-stegmotorhallare-nema-17-p90779) |  |90779| 39,9
-| 2.8 | Stegmotordrivare(helst electrokit) | 1st | [Electrokit](https://www.electrokit.com/dubbel-stegmotordrivare-for-arduino.53090) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/moduler/stegmotordrivare-1-2-a-p88218) | | 41013873/88218|199/119|
+| 2.8 | Stegmotordrivare(helst electrokit) | 1st | [Electrokit](https://www.electrokit.com/dubbel-stegmotordrivare-for-arduino.53090) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/moduler/stegmotordrivare-1-2-a-p88218) | 41013873/88218|199/119|
 | 2.9 | Batterieliminator | 1st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/stromforsorjning/nataggregat/ac-dc/stallbar-utspanning/stallbar-natadapter-3-12-v-(dc)-3-6-w-p44108) | [Electrokit](https://www.electrokit.com/batterieliminator-12v-2a.50115) |44108/41011018|129,9/169|
 | 2.10 | LCD | 1st | [Electrokit](https://www.electrokit.com/lcd-2x16-tecken-jhd162a-stn-bla-vit-led.44837) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/elektronik/optokomponenter/led-lcd-displayer/luxorparts-lcd-display-2x16-seriell-i2c-p90786) |41002513/90786|99/119,9|
 | 2.11 | Kuggremsskiva 5mm | 1st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-5mm.55066) |  |41015850 |79|
