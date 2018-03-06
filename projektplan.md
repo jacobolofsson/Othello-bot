@@ -83,10 +83,15 @@ Slutsats: För enkelhet bör samma processor användas till allt då det finns l
 ## Skiss
 ### Spelplan
 Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att pjäserna inte ska kunna glida över till rutan brevid. Spelplanen är kopplad till en arduinos 8 digital out, 8 Analog in för multiplex av 64 sensorer. Spelplanen har även 1 digital in för knappen samt 4 digital out för LED kopplad till arduinon för I/O.
+
 <img src="./Ritningar/spelbräde.svg">
-### Arm för att plocka upp pjäser
-<img src="./Ritningar/SkissEMP3StallningV4.svg">
+
 ### Anordning för att flytta armen
+
+<img src="./Ritningar/SkissEMP3StallningV4.svg">
+
+### Arm för att plocka upp pjäser
+Vändnings armen är en servo motor kopplad till två metal armar vartpå det sitter en electromagnet. Denna mekanism är det som kommer att plocka up och lägga ner pjäserna för Othello spelet. 
 
 <img src="./Ritningar/lever.svg">
 
@@ -116,6 +121,10 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 | 2.9 | Batterieliminator | 1st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/stromforsorjning/nataggregat/ac-dc/stallbar-utspanning/stallbar-natadapter-3-12-v-(dc)-3-6-w-p44108) | [Electrokit](https://www.electrokit.com/batterieliminator-12v-2a.50115) |
 | 2.10 | LCD | 1st | [Electrokit](https://www.electrokit.com/lcd-2x16-tecken-jhd162a-stn-bla-vit-led.44837) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/elektronik/optokomponenter/led-lcd-displayer/luxorparts-lcd-display-2x16-seriell-i2c-p90786) |
 | 2.11 | Kuggremsskiva 5mm | 1st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-5mm.55066) |  |
+| 3.1 | Servo, aurdino controlled | 1st | [Elfa](https://www.elfa.se/sv/servomotor-180-vdc-parallax-900-00005/p/17319437?q=servo&page=2&origPos=2&origPageSize=50&simi=99.63) | [M.nu](https://www.m.nu/servo-motorer-robotics/micro-servo-sg92r) | 
+| 3.2 | Metal rod | 1st | x | y | 
+| 3.3 | Electromagnet | 1st | x | y |
+| 3.4 | Screw for micro servo SG92R | 2st | x | y |
 ## Tidsplan
 | Vad | Tidsåtgång | Påbörjas senast | Färdigställt senast | Beroende av |
 | --- | ---------- | --------------- | ------------------- | ----------- |
