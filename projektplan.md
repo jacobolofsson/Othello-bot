@@ -106,14 +106,14 @@ Spelplanen är uppdelad i 8x8 rutor med en avskiljare mellan varandra för att p
 | 1.9 | Flatkabel | minst 22 poler | [Electrokit](https://www.electrokit.com/flatkabel-gra-26-ledare-1-27mm-m.44069) | [Elfa](https://www.elfa.se/sv/flatkabel-27-mm-25x0-08-mm-3m-3365-25/p/15566357?q=flatkabel&page=28&origPos=135&origPageSize=50&simi=99.65) |
 | 1.9 | Kontakter | minst 22 poler | [Elfa](https://www.elfa.se/sv/stiftlist-hona-50-fischer-elektronik-mk01-50z/p/14384049?q=stiftlist&page=13&origPos=248&origPageSize=50&simi=99.63)  | [Electrokit](https://www.electrokit.com/stiftlist-2-54mm-1x40p-brytbar.43412) |
 | 1.10 | Gummifötter | 4st | [Electrokit](https://www.electrokit.com/gummifot-o11x5mm-gra.43380?sort=price_asc) | [Elfa](https://www.elfa.se/sv/gummifoetteroo-25-mm-11-mm-svart-reinshagen-1841/p/14886891?channel=b2c&price_gs=9.5125&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLlYWaRFKkrCeVBkSxIdsWjV9c2qDOGwhMzEP0Zd5aZWickX0hMJZ_4aAlyCEALw_wcB) |
-| 2.1 | Kuggremsskiva 6mm | 4st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-6mm.51634) |  |
-| 2.2 | Kuggrem | 3m | [Electrokit](https://www.electrokit.com/kuggrem-xl-3-8-m.51829) | |
-| 2.3 | Kullager(lagerbock) | 4st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) | |
+| 2.1 | Kuggremsskiva 6mm | 4st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-6mm.51634) | 41012369 |79|
+| 2.2 | Kuggrem | 3m | [Electrokit](https://www.electrokit.com/kuggrem-xl-3-8-m.51829) | | |
+| 2.3 | Kullager(lagerbock) | 4st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) | | |
 | 2.4 | Stegmotor | 2st | [Electrokit](url) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/tillbehor/luxorparts-stegmotor-nema-17-p90776) |
-| 2.5 | Axel 6mm | 3st | [Electrokit](https://www.electrokit.com/axel-rostfritt-stal-6mm-x-300mm.53001) | |
-| 2.6 | Glidlager(lagerbock)6mm | 8st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) |  |
+| 2.5 | Axel 6mm | 3st | [Electrokit](https://www.electrokit.com/axel-rostfritt-stal-6mm-x-300mm.53001) | | |
+| 2.6 | Glidlager(lagerbock)6mm | 8st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) |  | |
 | 2.7 | Ställning för stegmotor | 2st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/tillbehor/luxorparts-stegmotorhallare-nema-17-p90779) |  |
-| 2.8 | Stegmotordrivare | 1st | [Electrokit](https://www.electrokit.com/dubbel-stegmotordrivare-for-arduino.53090) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/moduler/stegmotordrivare-1-2-a-p88218) |
+| 2.8 | Stegmotordrivare | 1st | [Electrokit](https://www.electrokit.com/dubbel-stegmotordrivare-for-arduino.53090) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/moduler/stegmotordrivare-1-2-a-p88218) | | |
 | 2.9 | Batterieliminator | 1st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/stromforsorjning/nataggregat/ac-dc/stallbar-utspanning/stallbar-natadapter-3-12-v-(dc)-3-6-w-p44108) | [Electrokit](https://www.electrokit.com/batterieliminator-12v-2a.50115) |
 | 2.10 | LCD | 1st | [Electrokit](https://www.electrokit.com/lcd-2x16-tecken-jhd162a-stn-bla-vit-led.44837) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/elektronik/optokomponenter/led-lcd-displayer/luxorparts-lcd-display-2x16-seriell-i2c-p90786) |
 | 2.11 | Kuggremsskiva 5mm | 1st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-5mm.55066) |  | |
