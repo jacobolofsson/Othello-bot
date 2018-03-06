@@ -29,7 +29,7 @@
        inkscape:collect="always"
        xlink:href="#pattern3681"
        id="pattern3701"
-       patternTransform="matrix(2.547675,0,0,2.3577327,78.732878,1087.9599)" />
+       patternTransform="matrix(2.3187689,0,0,2.1458927,86.280949,1079.4853)" />
     <pattern
        inkscape:collect="always"
        xlink:href="#pattern5361"
@@ -681,8 +681,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.3663793"
-     inkscape:cx="395.20399"
-     inkscape:cy="292.28027"
+     inkscape:cx="209.26592"
+     inkscape:cy="123.24566"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1142,14 +1142,14 @@
        width="39.440823"
        height="30.63945"
        x="122.19753"
-       y="934.17133" />
+       y="933.32617" />
     <rect
-       style="opacity:1;fill:url(#pattern3701);fill-opacity:1;stroke:#000000;stroke-width:0.49017289;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:url(#pattern3701);fill-opacity:1;stroke:#000000;stroke-width:0.44613135;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect3699"
-       width="84.169144"
-       height="67.707611"
-       x="83.030319"
-       y="970.36804" />
+       width="76.606628"
+       height="61.624149"
+       x="90.192276"
+       y="972.45898" />
     <text
        sodipodi:linespacing="125%"
        id="text3703"
@@ -1168,15 +1168,15 @@
          id="tspan3709"
          y="882.27936"
          x="168.66444"
-         sodipodi:role="line">Stång</tspan><tspan
+         sodipodi:role="line">2.5 Stång</tspan><tspan
          id="tspan3711"
          y="900.07721"
          x="168.66444"
-         sodipodi:role="line">Kuggrem</tspan><tspan
+         sodipodi:role="line">2.2 Kuggrem</tspan><tspan
          id="tspan3713"
          y="917.87506"
          x="168.66444"
-         sodipodi:role="line">Kullager</tspan><tspan
+         sodipodi:role="line">2.3 Kullager</tspan><tspan
          y="935.67291"
          x="168.66444"
          sodipodi:role="line"
@@ -1184,7 +1184,7 @@
          id="tspan3719"
          y="953.47076"
          x="168.66444"
-         sodipodi:role="line">Stegmotor</tspan><tspan
+         sodipodi:role="line">2.4 Stegmotor</tspan><tspan
          id="tspan3721"
          y="971.26862"
          x="168.66444"
