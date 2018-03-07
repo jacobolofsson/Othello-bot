@@ -15,11 +15,11 @@
 | 1.9 | Stiftlister | 2st | [Elfa](https://www.elfa.se/sv/stiftlist-hona-50-fischer-elektronik-mk01-50z/p/14384049?q=stiftlist&page=13&origPos=248&origPageSize=50&simi=99.63)  | [Electrokit](https://www.electrokit.com/stiftlist-2-54mm-1x40p-brytbar.43412) | 41001167 | 9 |
 | 1.10 | Gummifötter | 4st | [Electrokit](https://www.electrokit.com/gummifot-o11x5mm-gra.43380?sort=price_asc) | [Elfa](https://www.elfa.se/sv/gummifoetteroo-25-mm-11-mm-svart-reinshagen-1841/p/14886891?channel=b2c&price_gs=9.5125&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLlYWaRFKkrCeVBkSxIdsWjV9c2qDOGwhMzEP0Zd5aZWickX0hMJZ_4aAlyCEALw_wcB) | 41001130 | 4 |
 | 2.1 | Kuggremsskiva 6mm | 4st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-6mm.51634) | |41012369 |79|
-| 2.2 | Kuggrem | 3m | [Conrad](https://www.conrad.se/Reely-Kullager-radiellt-Kromst%E5l-Inre-diameter:-6-mm-Ytterdiameter:-19-mm-Varvtal-%28max%2e%29:-40000-rpm.htm?websale8=conrad-swe&pi=214469&ci=SHOP_AREA_19803_1210023) | |2050000076060 |26
-| 2.3 | Kullager | 4st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) | | 41012042|59
+| 2.2 | Kuggrem | 3m | [Elfa](https://www.electrokit.com/kuggrem-xl-3-8-m.51829) | |41012621 |39/m
+| 2.3 | Kullager | 4st | [Conrad](https://www.conrad.se/Reely-Kullager-radiellt-Kromst%E5l-Inre-diameter:-6-mm-Ytterdiameter:-19-mm-Varvtal-%28max%2e%29:-40000-rpm.htm?websale8=conrad-swe&pi=214469&ci=SHOP_AREA_19803_1210023) | | 2050000076060|26
 | 2.4 | Stegmotor | 2st | [Electrokit](https://www.electrokit.com/stegmotor-200-steg-varv-bipolar.45270) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/tillbehor/luxorparts-stegmotor-nema-17-p90776) | 41002881/90776| 199/179
-| 2.5 | Axel 6mm | 3st | [Electrokit](https://www.electrokit.com/axel-rostfritt-stal-6mm-x-300mm.53001) | |41013801 |49|
-| 2.6 | Glidlager(lagerbock)6mm | 8st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) |  |41012042 |59|
+| 2.5 | Axel 6mm | 6st | [Electrokit](https://www.electrokit.com/axel-rostfritt-stal-6mm-x-300mm.53001) | |41013801 |49|
+| 2.6 | Glidlager 6mm | 6st | [Conrad](https://www.conrad.se/Glidlager-igus-JSM-0608-06-Borrdiameter-6-mm.htm?websale8=conrad-swe&pi=1416591&ci=SHOP_AREA_213335_1101193)| [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) |2050003794602/41012042 |26/59|
 | 2.7 | Ställning för stegmotor | 2st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/tillbehor/luxorparts-stegmotorhallare-nema-17-p90779) |  |90779| 39,9
 | 2.8 | Stegmotordrivare(helst electrokit) | 1st | [Electrokit](https://www.electrokit.com/dubbel-stegmotordrivare-for-arduino.53090) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/moduler/stegmotordrivare-1-2-a-p88218) | 41013873/88218|199/119|
 | 2.9 | Batterieliminator | 1st | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/stromforsorjning/nataggregat/ac-dc/stallbar-utspanning/stallbar-natadapter-3-12-v-(dc)-3-6-w-p44108) | [Electrokit](https://www.electrokit.com/batterieliminator-12v-2a.50115) |44108/41011018|129,9/169|
