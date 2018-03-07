@@ -15,8 +15,8 @@
 | 1.9 | Stiftlister | 2st | [Elfa](https://www.elfa.se/sv/stiftlist-hona-50-fischer-elektronik-mk01-50z/p/14384049?q=stiftlist&page=13&origPos=248&origPageSize=50&simi=99.63)  | [Electrokit](https://www.electrokit.com/stiftlist-2-54mm-1x40p-brytbar.43412) | 41001167 | 9 |
 | 1.10 | Gummifötter | 4st | [Electrokit](https://www.electrokit.com/gummifot-o11x5mm-gra.43380?sort=price_asc) | [Elfa](https://www.elfa.se/sv/gummifoetteroo-25-mm-11-mm-svart-reinshagen-1841/p/14886891?channel=b2c&price_gs=9.5125&wt_mc=se.cse.gshop.sv.-&source=googleps&ext_cid=shgooaqsesv-na&gclid=Cj0KCQiAiKrUBRD6ARIsADS2OLlYWaRFKkrCeVBkSxIdsWjV9c2qDOGwhMzEP0Zd5aZWickX0hMJZ_4aAlyCEALw_wcB) | 41001130 | 4 |
 | 2.1 | Kuggremsskiva 6mm | 4st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-6mm.51634) | |41012369 |79|
-| 2.2 | Kuggrem | 3m | [Electrokit](https://www.electrokit.com/kuggrem-xl-3-8-m.51829) | |41012621 |39/m
-| 2.3 | Kullager(lagerbock) | 4st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) | | 41012042|59
+| 2.2 | Kuggrem | 3m | [Conrad](https://www.conrad.se/Reely-Kullager-radiellt-Kromst%E5l-Inre-diameter:-6-mm-Ytterdiameter:-19-mm-Varvtal-%28max%2e%29:-40000-rpm.htm?websale8=conrad-swe&pi=214469&ci=SHOP_AREA_19803_1210023) | |2050000076060 |26
+| 2.3 | Kullager | 4st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) | | 41012042|59
 | 2.4 | Stegmotor | 2st | [Electrokit](https://www.electrokit.com/stegmotor-200-steg-varv-bipolar.45270) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/arduino/tillbehor/luxorparts-stegmotor-nema-17-p90776) | 41002881/90776| 199/179
 | 2.5 | Axel 6mm | 3st | [Electrokit](https://www.electrokit.com/axel-rostfritt-stal-6mm-x-300mm.53001) | |41013801 |49|
 | 2.6 | Glidlager(lagerbock)6mm | 8st | [Electrokit](https://www.electrokit.com/lagerbock-o6mm-plast.51303) |  |41012042 |59|
@@ -26,7 +26,7 @@
 | 2.10 | LCD | 1st | [Electrokit](https://www.electrokit.com/lcd-2x16-tecken-jhd162a-stn-bla-vit-led.44837) | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/elektronik/optokomponenter/led-lcd-displayer/luxorparts-lcd-display-2x16-seriell-i2c-p90786) |41002513/90786|99/119,9|
 | 2.11 | Kuggremsskiva 5mm | 1st | [Electrokit](https://www.electrokit.com/kuggremskiva-xl-10t-5mm.55066) |  |41015850 |79|
 | 2.12 | Hållare ram | 4st | [??](url) | [??](url) | ||
-| 2.13 | Plattor | 3st | [??](url) | [??](url) | ||
+| 2.13 | Plattor | 1st | [??]() | [??](url) | ||
 | 3.1 | Servo | 1st | [Elektrokit](https://www.electrokit.com/hs422-standard-servo-0-4nm.44887?gclid=Cj0KCQiAw9nUBRCTARIsAG11eifNG8zzWkPj8r0Kc3eKOxAPi11XQ6DhI2Vbq2mJi5FygrwZvBIgP5saAr8xEALw_wcB)  | [Kjell&Company](https://www.kjell.com/se/sortiment/el-verktyg/elektronik/rc-tillbehor/tillbehor-servo-mottagare/luxorparts-s3003-standard-servo-4-1-kg-1-pack-p87902) | 41002565/87902 | 135/129:90 |
 | 3.2 | Metalstav 10mm x 20cm | 1st | [Creative Company](https://www.cchobby.se/metallstang-dia-2-mm-l-10-cm-10st) |  [Monatno](http://www.montano.se/product.html/kalldragen-rundstang?category_id=24) | 58022 / Kompaxel S355J2G3C+C | 19/21 |
 | 3.3 | Elektromagnet (ur relä) | 1st | [Elektrokit](https://www.electrokit.com/relaer.c148?gclid=Cj0KCQiAw9nUBRCTARIsAG11eidET_rIm1BAinoYusk1WUzJ9FTURTkSJ2dHIQl1eEgPIBIAjg2zjB0aAtC0EALw_wcB) | [Kjell&Company](https://www.kjell.com/se/sortiment/hem-kontor-fritid/larm-sakerhet-overvakning/larm/detektorer-sensorer-brytare/universalrela-12-24-v-2-a-24-v-p50602?gclid=Cj0KCQiAw9nUBRCTARIsAG11eid2oboUwZXbt1fyGYr25NYxS5U4X3cYwtXtuOyaCkSFj037lH0Y_7gaAhtHEALw_wcB) | 41003940 / 50602  | 24/99 |
