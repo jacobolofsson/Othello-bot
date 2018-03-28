@@ -2,60 +2,45 @@
 #include "sensor.h"
 #include "AI.h"
 #include "move_planner.h"
+#include "IO.h"
 
-const int WAITING_LED = 1;
-const int AI_THINKING_LED = 2;
-const int MAKING_MOVE_LED = 3;
-const int READING_BOARD_LED = 4;
+enum IO_state current_state;
+enum IO_state next_state;
 
-const int START_BUTTON = 10;
-int start_button_state = 0;
+struct game_state game_state;
 
-enum state {WAITING, AI_THINKING, MAKING_MOVE, READING_BOARD, ERROR} current_state;
+struct game_move next_move;
 
 void setup() {
+    IO_init();
+    sensor_init();
+    planner_init();
 
-    pinMode(WAITING_LED, OUTPUT);
-    pinMode(AI_THINKING_LED, OUTPUT);
-    pinMode(MAKING_MOVE_LED, OUTPUT);
-    pinMode(READING_BOARD_LED, OUTPUT);
-
-    pinMode(START_BUTTON, INPUT);
-    
     current_state = WAITING;
-    game_state = init_game();
 }
 
 void loop() {
-    digitalWrite(WAITING_LED, LOW);
-    digitalWrite(AI_THINKING_LED, LOW);
-    digitalWrite(MAKING_MOVE_LED, LOW);
-    digitalWrite(READING_BOARD_LED, LOW);
+    IO_display(current_state);
 
     switch(current_state) {
         case WAITING:
-            digitalWrite(WAITING_LED, HIGH);
-            start_button_state = digitalRead(START_BUTTON);
-            current_state = (start_button_state == HIGH) ? READING_BOARD : WAITING;
             break;
         case READING_BOARD:
-            digitalWrite(MAKING_MOVE_LED, HIGH);
-            game_state = read_board();
-            current_state = AI_THINKING;
+            game_state = sensor_read_board();
+            next_state = AI_THINKING;
             break;
         case AI_THINKING:
-            digitalWrite(AI_THINKING_LED, HIGH);
-            next_move = think(game_state); 
-            current_state = MAKING_MOVE;
+            next_move = AI_think(game_state, BLACK, 1000); 
+            next_state = MAKING_MOVE;
             break;
         case MAKING_MOVE:
-            digitalWrite(MAKING_MOVE_LED, HIGH);
-            execute_move(next_move);
-            current_state = WAITING;
+            planner_execute(next_move);
+            next_state = WAITING;
             break;
         case ERROR:
             // ERROR handling?
             break;
     }
+    current_state = next_state;
 
 }
