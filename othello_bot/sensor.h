@@ -1,6 +1,10 @@
 #ifndef SENSOR_H
 #define SENSOR_H
 
-board_t read_board();
+#include "game.h"
+
+void sensor_init(void);
+
+struct game_state sensor_read_board();
 
 #endif // SENSOR_H

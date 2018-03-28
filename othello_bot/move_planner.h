@@ -2,8 +2,8 @@
 #define MOVE_PLANNER_H
 
 #include "game.h"
+void planner_init(void);
 
-void place(struct move m);
-void flip(struct move m);
+void planner_execute(struct game_move m);
 
 #endif // MOVE_PLANNER_H

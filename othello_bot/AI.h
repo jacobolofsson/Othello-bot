@@ -3,6 +3,6 @@
 
 #include "game.h"
 
-struct move think(board_t game_state, player_t AI_color, int time_limit_ms);
+struct game_move AI_think(struct game_state gs, enum game_color AI_color, int time_limit_ms);
 
 #endif // AI_H
