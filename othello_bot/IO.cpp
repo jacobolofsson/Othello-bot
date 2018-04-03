@@ -1,4 +1,4 @@
-#include "IO.h"
+#include "IO.hpp"
 #include <Arduino.h>
 
 const int WAITING_LED = 1;

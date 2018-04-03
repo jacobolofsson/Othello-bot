@@ -16,7 +16,7 @@ struct Coordinate {
 
 class Board {
     public:
-        Board(void);
+        //Board(void);
 
         void put(const Player p, const Coordinate c);
         void flip(const Coordinate c);
