@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#define N_ROWS 8
-#define N_COLUMNS 8
+#define N_ROWS 4
+#define N_COLUMNS 4
 
 enum Player {
     WHITE, 
@@ -12,42 +12,50 @@ enum Player {
 struct Coordinate {
     int colPos;
     int rowPos;
+    enum Direction{S, SW, W, NW, N, NE, E, SE};
+    bool operator==(const Coordinate &rhs) const;
 };
 
+//template<int rowSize, int colSize>
 class Board {
     public:
-        //Board(void);
+        //Board(int _rowSize, int colSize);
 
         void put(const Player p, const Coordinate c);
         void flip(const Coordinate c);
 
         int getPoints(const Player p) const;
         bool isEmpty(const Coordinate c) const;
-        bool isOccupiedBy(const Player p, const Coordinate c) const;
+        static bool isInBounds(const Coordinate c);
+        Player getPlayer(const Coordinate c) const;
+        static Coordinate step(const Coordinate c, const Coordinate::Direction d);
                                                                             
     private:
+        //const int rowSize = N_ROWS;
+        //const int colSize = N_COLUMNS;
         struct Position {
                 bool isEmpty{true};
                 Player player{WHITE};
         };
-
-        bool isInBounds(const Coordinate c) const;
-
         Position positions[N_ROWS][N_COLUMNS];
 };
 
 class Game {
     public:
-        Game(Board board);
+        //Game(Board<4,4> board);
+        Game(Board b);
 
         Coordinate* getLegalMoves(const Player p) const;
         bool isOver(void) const;
-        bool isPlayerWinner(const Player p) const;
+        bool isWinner(const Player p) const;
 
         void applyMove(const Player p, const Coordinate c);
 
     private:
+        //Board<4,4> board;
         Board board;
+
+        Coordinate* getFlippedByMove(const Player p, const Coordinate c) const;
 };
 
 #endif // GAME_H
