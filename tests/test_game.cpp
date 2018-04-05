@@ -42,6 +42,10 @@ TEST_CASE("Test empty board", "[board][game]") {
 }
 
 TEST_CASE("Test board with a few pieces", "[board][game]") {
+    //____
+    //_BW_
+    //_WB_
+    //____
     Board<4,4> board;
 
     board.put(BLACK, {1, 1});
