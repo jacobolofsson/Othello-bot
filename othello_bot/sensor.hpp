@@ -9,6 +9,6 @@ class Sensor {
 
         void read(void);
         
-        Board getBoard(void) const;
+        Board<4,4> getBoard(void) const;
 };
 #endif // SENSOR_H

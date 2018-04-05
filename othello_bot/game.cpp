@@ -1,41 +1,56 @@
 #include "game.hpp"
-//template class Board<>;
 
 bool Coordinate::operator==(const Coordinate &rhs) const {
     return (this->colPos == rhs.colPos) && (this->rowPos == rhs.rowPos);
 }
+Coordinate Coordinate::step(const Coordinate::Direction d) {
+    Coordinate temp = *this;
+    switch (d) {
+        case SW :
+            return this->step(S).step(W);
+        case Se :
+            return this->step(S).step(E);
+        case NW :
+            return this->step(N).step(W);
+        case NE :
+            return this->step(N).step(E);
+        case N :
+            --temp.colPos;
+            break;
+        case S :
+            ++temp.colPos;
+            break;
+        case W :
+            --temp.rowPos;
+            break;
+        case E :
+            ++temp.rowPos;
+            break;
+    }
+    return temp;
+}
 
-void Board::put(const Player p, const Coordinate c) {
+
+Game::Game(Board<4,4> b) {
+    this->board = b;
 }
-void Board::flip(const Coordinate c) {
-}
-int Board::getPoints(const Player p) const {
+int Game::getLegalMoves(const Player p) const {
     return 0;
 }
-bool Board::isEmpty(const Coordinate c) const {
+int Game::getLegalMoves(const Player p, Coordinate buffer[]) const {
     return 0;
 }
-bool Board::isInBounds(const Coordinate c) {
-    return false;
-}
-Player Board::getPlayer(const Coordinate c) const {
-    return WHITE;
-}
-Coordinate Board::step(const Coordinate c, const Coordinate::Direction d) {
-    return {0,0};
-}
-
-
-Game::Game(Board b) {
-}
-Coordinate* Game::getLegalMoves(const Player p) const {
-    return 0;
+Player Game::nextPlayer(const Player p) {
+    return p == BLACK ? WHITE : BLACK;
 }
 bool Game::isOver() const {
-    return 0;
+    return 0 == this->getLegalMoves(BLACK) && 0 == this->getLegalMoves(WHITE);
 }
 bool Game::isWinner(const Player p) const {
-    return false;
+    return this->isOver() && ( this->getPoints(p) > this->getPoints(nextPlayer(p)) );
+}
+int Game::getPoints(const Player p) const {
+    return 0;
 }
 void Game::applyMove(const Player p, const Coordinate c) {
 
