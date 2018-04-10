@@ -12,14 +12,36 @@ enum Player {
 struct Coordinate {
     int rowPos;
     int colPos;
-    enum Direction {S, SW, W, NW, N, NE, E, Se};
+    enum Direction {S, SW, W, NW, N, NE, E, Se,
+    firstDir = S, lastDir = Se};
     bool operator==(const Coordinate &rhs) const;
+    bool operator< (const Coordinate &rhs) const;
+    bool operator<=(const Coordinate &rhs) const;
     Coordinate step(const Coordinate::Direction d);
 };
 
 template<int rowSize, int colSize>
 class Board {
     public:
+        Coordinate getFirst(void) const {
+            Coordinate temp = first;
+            return temp;
+        }
+        Coordinate getLast(void) const {
+            Coordinate temp = last;
+            return temp;
+        }
+        Coordinate iterate(const Coordinate c) const {
+            Coordinate new_c = c;
+            if (c.rowPos < last.rowPos) {
+                new_c.rowPos++;
+            } else {
+                new_c.rowPos = first.rowPos;
+                new_c.colPos++;
+            }
+            return new_c;
+        }
+
         void put(const Player p, const Coordinate c) {
             this->positions[c.rowPos][c.colPos].isEmpty = false;
             this->positions[c.rowPos][c.colPos].player = p;
@@ -46,6 +68,8 @@ class Board {
         };
                                                                             
     private:
+        static const constexpr Coordinate first = {0,0};
+        static const constexpr Coordinate last = {rowSize-1, colSize-1};
         struct Position {
                 bool isEmpty{true};
                 Player player{WHITE};
@@ -66,9 +90,10 @@ class Game {
 
     private:
         Board<4,4> board;
+        static const int BUFFER_SIZE = 16;
 
         int getLegalMoves(const Player p) const;
-        Coordinate* getFlippedByMove(const Player p, const Coordinate c) const;
+        int getsFlippedByMove(const Player p, const Coordinate c, Coordinate buffer[]) const;
 };
 
 #endif // GAME_H

@@ -23,6 +23,14 @@ TEST_CASE("Test step", "[coordinate][board]") {
         CHECK((Coordinate {0,0}).step(Coordinate::E)  == Coordinate {1,0});
         CHECK((Coordinate {0,0}).step(Coordinate::Se) == Coordinate {1,1});
     }
+    SECTION("Test iteration") {
+        Board<4,4> b;
+        CHECK(b.getFirst() == Coordinate {0,0});
+        CHECK(b.getLast() == Coordinate {3,3});
+
+        CHECK(b.iterate({0,0}) == Coordinate {1,0});
+        CHECK(b.iterate({3,1}) == Coordinate {0,2});
+    }
 }
 TEST_CASE("Test game functions", "[game]") {
     CHECK(Game::nextPlayer(BLACK) == WHITE);
@@ -85,32 +93,27 @@ TEST_CASE("Test board with a few pieces", "[board][game]") {
             int nBlackMoves = game.getLegalMoves(BLACK, buffer);
             std::vector<Coordinate> blackMoves(buffer, buffer + nBlackMoves);
 
-            CHECK(nBlackMoves == 6);
+            CHECK(nBlackMoves == 4);
             CHECK_THAT(blackMoves,
                     Catch::VectorContains( Coordinate {2,0} ) &&
-                    Catch::VectorContains( Coordinate {3,0} ) &&
                     Catch::VectorContains( Coordinate {3,1} ) &&
                     Catch::VectorContains( Coordinate {0,2} ) &&
-                    Catch::VectorContains( Coordinate {0,3} ) &&
                     Catch::VectorContains( Coordinate {1,3} ) );
 
             int nWhiteMoves = game.getLegalMoves(WHITE, buffer);
             std::vector<Coordinate> whiteMoves(buffer, buffer + nWhiteMoves);
 
-            CHECK(nWhiteMoves == 6);
+            CHECK(nWhiteMoves == 4);
             CHECK_THAT(whiteMoves,
-                    Catch::VectorContains( Coordinate {0,0} ) &&
                     Catch::VectorContains( Coordinate {1,0} ) &&
                     Catch::VectorContains( Coordinate {0,1} ) &&
                     Catch::VectorContains( Coordinate {3,2} ) &&
-                    Catch::VectorContains( Coordinate {2,3} ) &&
-                    Catch::VectorContains( Coordinate {3,3} ) );
+                    Catch::VectorContains( Coordinate {2,3} ) );
         }
         SECTION("Test getLegalMoves with too small buffer") {
             Coordinate buffer[2];
             CHECK(game.getLegalMoves(BLACK, buffer) == -1);
             CHECK(game.getLegalMoves(WHITE, buffer) == -1);
-
         }
         SECTION("Test legal move") {
             game.applyMove(BLACK, {0, 2});
@@ -194,8 +197,8 @@ TEST_CASE("Test board with only one avaliable slot", "[game]") {
         CHECK(game.isWinner(WHITE) == true);
         CHECK(game.isWinner(BLACK) == false);
 
-        CHECK(game.getPoints(BLACK) == 0);
-        CHECK(game.getPoints(WHITE) == 16);
+        CHECK(game.getPoints(BLACK) == 1);
+        CHECK(game.getPoints(WHITE) == 15);
     }
 
 }
@@ -270,21 +273,21 @@ TEST_CASE("Test board where game over for WHITE", "[game]") {
     CHECK(game.isWinner(WHITE) == false);
     CHECK(game.isWinner(BLACK) == false);
 
-    CHECK(game.getPoints(BLACK) == 1);
-    CHECK(game.getPoints(WHITE) == 14);
+    CHECK(game.getPoints(BLACK) == 10);
+    CHECK(game.getPoints(WHITE) == 1);
 
     Coordinate buffer[100];
-    CHECK(game.getLegalMoves(BLACK, buffer) == 0);
-    CHECK(game.getLegalMoves(WHITE, buffer) == 1);
+    CHECK(game.getLegalMoves(BLACK, buffer) == 4);
+    CHECK(game.getLegalMoves(WHITE, buffer) == 0);
     
-    game.applyMove(WHITE, {1, 1});
+    game.applyMove(BLACK, {2, 0});
 
     CHECK(game.isOver() == true);
-    CHECK(game.isWinner(WHITE) == true);
-    CHECK(game.isWinner(BLACK) == false);
+    CHECK(game.isWinner(WHITE) == false);
+    CHECK(game.isWinner(BLACK) == true);
 
-    CHECK(game.getPoints(BLACK) == 0);
-    CHECK(game.getPoints(WHITE) == 16);
+    CHECK(game.getPoints(BLACK) == 12);
+    CHECK(game.getPoints(WHITE) == 0);
 
 }
 TEST_CASE("Test draw", "[game]") {

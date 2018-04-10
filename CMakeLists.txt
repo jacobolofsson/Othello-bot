@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 project(Othello_bot)
 
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_BUILD_TYPE Debug)
 set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/othello_bot)
 set(TEST_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/tests)
 
