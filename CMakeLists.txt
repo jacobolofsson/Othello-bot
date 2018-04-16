@@ -17,3 +17,6 @@ target_link_libraries(test Catch)
 
 add_executable(bench ${TEST_SRC_DIR}/benchmark_main.cpp ${SRC_DIR}/AI.cpp ${SRC_DIR}/game.cpp)
 target_include_directories(bench PRIVATE ${SRC_DIR})
+
+add_executable(play ${TEST_SRC_DIR}/play_main.cpp ${SRC_DIR}/AI.cpp ${SRC_DIR}/game.cpp)
+target_include_directories(play PRIVATE ${SRC_DIR})
