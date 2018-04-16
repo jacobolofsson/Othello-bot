@@ -5,12 +5,16 @@
 
 // An AI that will provide the best move for a game of othello
 // given enough time to think.
+// It is important to check that there are avaliable moves before
+// using getBestMove()
 // Example:
 //      AI ai = AI(game, player);
-//      for (int i = 0; i<1000; ++i) {
-//          ai.think();
+//      if (getNumMoves > 0) {
+//          for (int i = 0; i<1000; ++i) {
+//              ai.think();
+//          };
+//          bestMove = getBestMove();
 //      };
-//      bestMove = getBestMove();
 class AI {
     public:
         AI(Game g, Player p);

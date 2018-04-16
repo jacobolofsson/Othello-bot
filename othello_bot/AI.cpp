@@ -13,7 +13,7 @@
 AI::AI(Game g, Player p) : currentGame(g), AIplayer(p) {
     Coordinate tempBuffer[BUFFER_SIZE];
     nAvaliableMoves = currentGame.getLegalMoves(AIplayer, tempBuffer);
-    for (int i = 0; i<nAvaliableMoves; i++) {
+    for (int i = 0; i<nAvaliableMoves; ++i) {
         simulations[i].startCoord = tempBuffer[i];
         reset(simulations[i]);
     };
@@ -42,7 +42,7 @@ Coordinate AI::getBestMove(void) const {
     float bestScore = -1000.0;
     int bestIndex = -1;
     float score = 0.0;
-    for (int i = 0; i<nAvaliableMoves; i++) {
+    for (int i = 0; i<nAvaliableMoves; ++i) {
         score = simulations[i].getScore();
         if ( score > bestScore) {
             bestScore = score;
@@ -56,6 +56,7 @@ Coordinate AI::getBestMove(void) const {
 void AI::step(Simulation s) {
     Coordinate tempBuffer[BUFFER_SIZE];
     int tempAvaliableMoves = s.game.getLegalMoves(s.turn, tempBuffer);
+    // If no avaliable moves: pass
     if (tempAvaliableMoves > 0) {
         s.game.applyMove( s.turn, tempBuffer[getRandom(tempAvaliableMoves)] );
     }
