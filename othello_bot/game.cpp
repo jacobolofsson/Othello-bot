@@ -1,5 +1,8 @@
 #include "game.hpp"
 
+// This file contains the implementation of a Game-class used to implement
+// the rules of the game reversi (othello).
+
 // Overload comparison operators to compare different coordinates
 bool Coordinate::operator==(const Coordinate &rhs) const {
     return (this->colPos == rhs.colPos) && (this->rowPos == rhs.rowPos);
