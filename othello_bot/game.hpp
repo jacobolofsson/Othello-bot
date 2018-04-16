@@ -115,8 +115,8 @@ class Game {
         bool isOver(void) const;
         bool isWinner(const Player p) const;
         int getPoints(const Player p) const;
-
         void applyMove(const Player p, const Coordinate c);
+        void toString(char* s) const;
 
     private:
         Board<4,4> board;

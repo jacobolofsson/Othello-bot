@@ -98,6 +98,25 @@ void Game::applyMove(const Player p, const Coordinate c) {
         this->board.flip(coordBuffer[i]);
     };
 }
+// Returns a string representation of the game in the buffer given
+void Game::toString(char *s) const {
+    for(Coordinate c = board.getFirst(); c <= board.getLast(); c = board.iterate(c)) { 
+        if(board.isEmpty(c)) {
+            *s = '_';
+        } else if (board.getPlayer(c) == WHITE) {
+            *s = 'O';
+        } else {
+            *s = 'X';
+        };
+        s++;
+        if (c.rowPos % 4 == 3) {
+            *s = '\n';
+            s++;
+        };
+    };
+    *s = '\0';
+    return;
+};
 // Takes a move (player + coordinate) and a buffer which is filled with the positions of
 // opponent pieces that is flipped by the move. The return value is the amount of opponent
 // pieces that gets flipped.
