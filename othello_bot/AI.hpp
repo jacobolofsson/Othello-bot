@@ -9,7 +9,7 @@
 // using getBestMove()
 // Example:
 //      AI ai = AI(game, player);
-//      if (getNumMoves > 0) {
+//      if (ai.getNumMoves > 0) {
 //          for (int i = 0; i<1000; ++i) {
 //              ai.think();
 //          };
@@ -37,8 +37,8 @@ class AI {
             };
         };
 
-        const Game currentGame;
-        const Player AIplayer;
+        Game currentGame;
+        Player AIplayer;
         static const int BUFFER_SIZE = 20;
         Simulation simulations[BUFFER_SIZE];
         int currentSim {0};
