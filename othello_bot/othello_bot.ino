@@ -5,20 +5,19 @@
 #include "move_planner.hpp"
 #include "IO.hpp"
 
-
-const unsigned long AI_TIME_LIMIT_MS = 5000;
+const unsigned long AI_TIME_LIMIT_MS = CONF_AI_TIME_LIMIT_MS;
 unsigned long startTime;
 
-Sensor sensor;
-MovePlanner planner;
-IO io;
-
-Player AIplayer = BLACK;
+Player AIplayer = WHITE;
 Coordinate AImove;
 Board<4,4> board;
 AI ai(Game(board), AIplayer);
 
-enum state {IDLE, RESET_AI, THINK, MOVING} state = IDLE;
+Sensor sensor;
+MovePlanner planner;
+IO io(&board, &AImove);
+
+enum state {IDLE, RESET_AI, THINK, MOVING, GAME_OVER, ERROR} state = IDLE;
 
 void setup() {
     sensor.setup();
@@ -48,16 +47,16 @@ void loop() {
                 state = IDLE;
             };
             break;
+        case GAME_OVER: // Intentional fall through to default:
+        case ERROR: // Intentional fall through to default:
         case IDLE: // Intentional fall through to default:
         default:
             if (io.isNewTurn()) {
                 state = RESET_AI;
-            } else {
-                state = IDLE;
             };
         break;
     };
     sensor.read();
     planner.write();
-    io.write();
+    io.write(state);
 }

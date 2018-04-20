@@ -35,7 +35,8 @@ Board<4,4> Sensor::getBoard(void) const {
     return board;
 };
 // Helper function to translate pin position to a board
-// coordinate.
+// coordinate. This assumes that the pins are ordered
+// from left to right, starting in the top left corner.
 Coordinate Sensor::pinToCoord(const int pin) {
     Coordinate c;
     c.rowPos = pin % 4;
