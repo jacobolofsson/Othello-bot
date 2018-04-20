@@ -19,6 +19,7 @@ class AI {
     public:
         AI(Game g, Player p);
 
+        static void setup(void);
         void think(void);
         int getNumMoves(void) const { return nAvaliableMoves; };
         Coordinate getBestMove(void) const;

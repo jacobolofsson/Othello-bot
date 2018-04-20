@@ -23,6 +23,7 @@ void setup() {
     sensor.setup();
     planner.setup();
     io.setup();
+    ai.setup();
 }
 
 void loop() {

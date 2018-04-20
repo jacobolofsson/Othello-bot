@@ -18,6 +18,10 @@ AI::AI(Game g, Player p) : currentGame(g), AIplayer(p) {
         reset(simulations[i]);
     };
 };
+// This function initializes the RNG that drives the monte carlo simulations
+void AI::setup(void) {
+    initRandom();
+};
 // This function steps the AIs current simulation one step.
 // If the simulation is over the AI adds the score to the simulation
 // vector, resets the game and then switches the current simulation

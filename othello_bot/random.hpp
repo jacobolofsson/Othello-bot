@@ -17,7 +17,7 @@
     int getRandom(int max) {
         return rand()%max;
     };
-#endif //NO_TEST
+#endif //ARDUINO
 
 
 
