@@ -3,6 +3,21 @@
 
 #include "config.hpp"
 #include "game.hpp"
+
+// The sensor class reads the physical values from the playing board
+// and translates them so that the program can understand the data.
+// The data is read one position per call to read(), therefore read()
+// should be called with a higher frequency than getBoard().
+// Example:
+//  Sensor s;
+//  s.setup();
+//  while (true) {
+//      s.read();
+//      if( /* Time limit reached */ ) {
+//          b = s.getBoard();
+//          /* Do something with the board data */
+//      };
+//  };
 class Sensor {
     public:
         void setup(void);

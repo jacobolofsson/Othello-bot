@@ -1,5 +1,6 @@
 #ifndef CONFIG_H
 #define CONFIG_H
+// In this file all the constants for the project are defined, change any values needed here
 
 #include "Arduino.h"
 
@@ -21,5 +22,7 @@
 #define CONF_BOARD_L_MM 200
 
 #define CONF_N_SENSORS CONF_BOARD_COL_SZ*CONF_BOARD_ROW_SZ
+
+#define CONF_AI_TIME_LIMIT_MS 5000
 
 #endif //CONFIG_H
