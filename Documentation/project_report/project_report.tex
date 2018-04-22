@@ -1,0 +1,85 @@
+\documentclass[a4paper]{article}
+\usepackage[swedish]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\pagenumbering{roman}
+
+\usepackage{tabularx}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\lstset{
+	language=c++,
+	basicstyle=\ttfamily,
+	keywordstyle=\bfseries\color{red},
+	commentstyle=\itshape\color{ForestGreen},
+	identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+	numbers=left,
+	frame=single,
+	captionpos =b,
+	breaklines=true
+	}
+		
+\usepackage{graphicx}
+\graphicspath{ {../images/} }
+
+\begin{document}
+\title{
+	\textbf{Othellobot}\\
+	\textit{Elektromekaniskt projekt (5hp)}
+}
+\author{Jacob Olofsson, Thomas Danielsson, Aksel Wännström}
+\maketitle
+
+\pagebreak
+
+\begin{abstract}
+
+\end{abstract}
+
+\tableofcontents
+
+\pagebreak
+\pagenumbering{arabic}
+
+\section{Introduktion}
+\section{Teori}
+\section{Metod}
+\section{Resultat}
+\section{Diskussion och slutsats}
+
+\pagebreak
+\begin{appendix}
+\section{Källkod}
+\subsection{othello\_bot.ino}
+\lstinputlisting{../../othello_bot/othello_bot.ino}
+\subsection{game.hpp}
+\lstinputlisting{../../othello_bot/game.hpp}
+\subsection{game.cpp}
+\lstinputlisting{../../othello_bot/game.cpp}
+\subsection{AI.hpp}
+\lstinputlisting{../../othello_bot/AI.hpp}
+\subsection{AI.cpp}
+\lstinputlisting{../../othello_bot/AI.cpp}
+\subsection{sensor.hpp}
+\lstinputlisting{../../othello_bot/sensor.hpp}
+\subsection{sensor.cpp}
+\lstinputlisting{../../othello_bot/sensor.cpp}
+\subsection{move\_planner.hpp}
+\lstinputlisting{../../othello_bot/move_planner.hpp}
+\subsection{move\_planner.cpp}
+\lstinputlisting{../../othello_bot/move_planner.cpp}
+\subsection{IO.hpp}
+\lstinputlisting{../../othello_bot/IO.hpp}
+\subsection{IO.cpp}
+\lstinputlisting{../../othello_bot/IO.cpp}
+\subsection{config.hpp}
+\lstinputlisting{../../othello_bot/config.hpp}
+\subsection{random.hpp}
+\lstinputlisting{../../othello_bot/random.hpp}
+\end{appendix}
+
+\end{document}
