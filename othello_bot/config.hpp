@@ -5,7 +5,7 @@
 #include "Arduino.h"
 
 // Debug macros
-#define DEBUG 1
+#define DEBUG 1 // Comment out this row to remove all debug statements
 #ifdef DEBUG
     #define DEBUG_SETUP Serial.begin(9600)
     #define DEBUG_WR(x) Serial.print (x)
