@@ -32,7 +32,10 @@ void loop() {
             board = sensor.getBoard(); 
             ai = AI(Game(board), AIplayer);
             startTime = millis();
-            state = THINK;
+            if (ai.getNumMoves() > 0) {
+                state = THINK;
+            } else {
+                state = GAME_OVER;
             break;
         case THINK:
             if ( millis()-startTime < AI_TIME_LIMIT_MS ) {
@@ -49,8 +52,8 @@ void loop() {
             };
             break;
         case GAME_OVER: // Intentional fall through to default:
-        case ERROR: // Intentional fall through to default:
-        case IDLE: // Intentional fall through to default:
+        case ERROR:     // Intentional fall through to default:
+        case IDLE:      // Intentional fall through to default:
         default:
             if (io.isNewTurn()) {
                 state = RESET_AI;
