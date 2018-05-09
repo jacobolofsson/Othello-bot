@@ -37,6 +37,7 @@ void loop() {
             } else {
                 state = GAME_OVER;
             break;
+            };
         case THINK:
             if ( millis()-startTime < AI_TIME_LIMIT_MS ) {
                 ai.think();
