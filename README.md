@@ -16,7 +16,7 @@ The tests are compiled by Cmake (preferably in the build folder to avoid file cl
 cd build
 cmake ..
 make
-./test # Run tests
+./test_exec # Run tests
 ./bench # Run benchmark
 ./play # Test to play against the AI in the terminal
 ```
