@@ -21,10 +21,12 @@
 	frame=single,
 	captionpos =b,
 	breaklines=true
+	escapeinside=`',
+	escapebegin={\color{editorGray}}
 	}
 		
 \usepackage{graphicx}
-\graphicspath{ {../images/} }
+\graphicspath{ {../Drawings/} }
 
 \begin{document}
 \title{
@@ -37,7 +39,7 @@
 \pagebreak
 
 \begin{abstract}
-Projektet gick du på att bygga en robot som kunde mekaniskt spela Othello med en människa. Det som byggdes var en robot som kan flytta pjäser med en elektormagnet, 3 motor och ett program som läser vad pjäser ligger beroende på deras elektonik och flyattar pjäser. 
+Denna rapport beskriver ett konstruktionsprojekt med mål att konstruera en robot som kan spela brädspelet Othello (även kallat reversi) mot en mänsklig spelare. Pjäserna konstruerades i plast med en permanentmagnet inuti. Hall-sensorer monterades sedan i spelplanen för att kunna läsa av ifall rutorna i spelplanen var tomma, innehöll svarta pjäser eller vita pjäser. Ett AI baserat på en Monte Carlo-algoritm beräknar sedan det bästa möjliga draget. Detta drag utförs sedan med en robotarm som flyttar sig längs en bana ovanför spelplanen som håller den magnetiska spelpjäsen med hjälp av en elektromagnet.
 \end{abstract}
 
 \tableofcontents
@@ -46,18 +48,108 @@ Projektet gick du på att bygga en robot som kunde mekaniskt spela Othello med e
 \pagenumbering{arabic}
 
 \section{Introduktion}
-Elektromekanisk projekt går up på att bygga något mekanisk som omfamnar även elektornik och programmering. Syftet är att sikta på ett projekt som är ungerfär 1/3 mekanisk, 1/3 elektonisk, och 1/3 programmering. Det som bestämdes att göra i detta projekt var en Othellorobot som styrs av 3 motorer och en Aurdino som är programmerad av oss.
+Spelet \textit{Reversi} uppfanns på 1880-talet i london och har sedan dess spritt sig runt hela världen.
+Idag är spelet mer känt vid namnet \textit{Othello}.
+
+Målet med detta projekt är att att konstruera en robot som kan spela Othello mot en människa.
+
+\subsection{Spelregler}
+Spelet spelas av två spelare, hädanefter svart och vit.
+Spelplanen är normalt ett bräde indelat i 8x8 rutor men kan spelas med ett mindre eller större antal rutor.
+Spelpjäserna är svarta på ena sidan och vita på den andra.
+Sidan som ligger uppåt visar vilken spelare pjäsen hör till.
+Spelet startar med fyra pjäser, två från varje spelare i mitten i ett schackmönster.
+Spelarna turas om att placera ut en pjäs i taget i ett tomt fält.
+När en pjäs placeras ut ska alla av motspelarens pjäser som ligger i raka linjer (horisontella, vertikala eller diagonala) mellan den utplacerade pjäsen och en annan pjäs av den spelande spelaren vändas.
+Ett drag är endast tillåtet om minst en av motståndarens pjäser vänds av draget.
+Ifall det inte finns några möjliga drag måste spelaren passa sin tur tills det finns ett möjligt drag att göra.
+När ingen kan göra några fler drag är spelet slut och den spelare med mest pjäser på brädet vinner.
+
 \section{Teori}
-\subsection{AI}
-\subsection{Mjukvara}
-\subsection{Hårdvara}
+För att en robot ska kunna spela Othello måste den på något sätt kunna läsa av spelplanen, tänka fram ett bra drag och sedan fysiskt utföra draget.
+
+\subsection{Sensorer}
+För att kunna läsa av spelbrädet finns det många tillvägagångssätt.
+Eftersom en robot som ska spela othello måste veta om varje ruta på spelplanen antingen är tom, har en svart spelpjäs eller en vit spelpjäs på sig finns det 3 olika tillstånd för varje ruta.
+För detta ändamål lämpar sig någon form av linjär sensor som kan läsas av analogt bra.
+Sensorer kan då sättas vid varje ruta på spelplanen och kalibreras så att de är mättade åt ena hållet för en svart pjäs,  mättade åt andra hållet för en vit pjäs och någonstans mitt emellan när rutan är tom.
+
+\subsection{AI-algoritm} \label{AI}
+Ett vanligt sätt att bygga ett AI för att spela ett spel är att på något sätt bygga ett beslutsträd där alla möjliga dra utvärderas.
+Denna sorts algoritm växer exponentiellt i både tids- och minneskomplexitet vilket gör att den inte lämpar sig särskilt bra för en resursbegränsad platform som t.ex en mikrokontroller.
+Därför har vi valt att använda oss av en Monte Carlo-metod.
+Monte Carlo-metoden går ut på att istället för att bygga ett stort träd simuleras spel utifrån den nuvarande uppställningen på planen med slumpmässiga drag.
+Programmet håller räkningen på vinster och förluster och väljer sedan det drag som i genomsnitt lett till flest vinster bland de slumpade spelen.
+Denna algoritm använder en konstant minneskomplexitet och kommer att ge ett bättre svar desto längre den får tänka men betänketiden går att anpassa exakt efter omständigheterna.
+Algoritmen kan sammanfattas i följande steg:
+\begin{itemize}
+\item Hämta alla möjliga drag
+\item Medan tidsbegränsningen inte gått ut: 
+	\begin{itemize} 
+	\item Välj nästa möjliga drag
+	\item Utför draget och starta simulering
+	\item Medan simuleringen (spelet) inte är över:
+		\begin{itemize}
+		\item Byt spelare
+		\item Gör slumpmässigt drag
+		\end{itemize}	
+	\item Spara vinst/förlust
+	\end{itemize}
+\item Välj det drag som gett mest vinster i medelvärde
+\end{itemize}
+
+\subsection{Robotarm}
+För att roboten ska kunna plocka upp en pjäs och sedan släppa den på rätt plats på spelplanen behövs tre frihetsgrader.
+Armen behöver kunna röra sig tvärsöver planen (två dimensioner) samt lyfta och sänka en pjäs den håller i.
+Rörelserna kan dock vara ganska begränsade då roboten endast behöver komma åt ett antal fördefinierade rutor och inget utanför det (förutom att plocka upp en ny pjäs).
+Rörelsen i höjdled kan vara ännu mer begränsad, den behöver egentligen vara binär.
+Antingen är den i höjd för att plocka upp en spelpjäs eller så är den i höjd för att kunna flytta spelpjäsen ovanför de andra pjäserna.
+
 \section{Metod}
+\subsection{Mjukvara}
+Designen av mjukvaran är indelad i fem stycken moduler som ansvarar för sin egen del av designen och en toppnivå som knyter samman modulerna, se figur \ref{system_arch}.
+Se appendix \ref{code} för fullständig kod.
+\begin{figure}\label{system_arch}
+\centering
+\includegraphics[scale=0.6]{system_arch}
+\caption{Den implementerade mjukvaruarkitekturen. Huvudmodulen \texttt{othello\_bot} kommunicerar med de andra undermodulerna. Det gemensamma interfacet \texttt{game} är sättet modulerna kommunicerar med varandra.}
+\end{figure}
+
+\subsubsection*{game}
+Modulen \texttt{game} implementerar spelreglerna och definierar spelbrädet.
+Modulen definierar även koordinaterna till spelbrädet och vad en spelare är.
+Den här modulen har ingen kontakt med hårdvaran.
+
+\subsubsection*{AI}
+Modulen \texttt{AI} implementerar AI:t som beskrivts i del \ref{AI}.
+Modulen tar ett state i form av ett spel och en spelarfärg som definieras i modulen \texttt{game} och beräknar det bästa draget.
+
+\subsubsection*{move\_planner}
+Modulen \texttt{move\_planner} ansvarar för att ta ett drag (i form av en spelare och en koordinat) och sedan utföra det fysiskt.
+Det är den här modulen som har kontakt med hårdvaran för styrning.
+
+\subsubsection*{IO}
+Modulen \texttt{IO} ansvarar för att kommunicera med hårdvaran, att läsa av knappar för att programmet ska veta om de kan börja på nästa tur och skriva information om programmets status till LEDs.
+
+\subsubsection*{sensor}
+Modulen \texttt{sensor} ansvarar för att läsa av sensorerna i spelbrädet samt att tolka detta till en representation av spelbrädet som definierats i \texttt{game}.
+Den här modulen har också direkt kontakt med hårdvaran.
+
+\subsection{Hårdvara}
+Som kontroller till projektet valdes en Arduino för att hålla komplexiteten i programmeringen nere.
+Vidare valdes en Arduino Mega för att ha tillgång till så många analoga portar som möjligt för sensorerna samt att ha så mycket processorkraft som möjligt för AI:t.
+Som linjära sensorer valdes Hall-sensorer och spelpjäserna konstruerades med magneter inuti.
+Detta medförde att en elektromagnet blev ett passande val för att plocka upp och släppa pjäser.
+Elektromagneten sattes på en två-dimensionell bana likt en 3D-skrivare och drivs med två stegmotorer (via kugghjul och kuggremmar) för precision.
+Elektromagneten kan sedan sänkas eller höjas med ett servo.
+Se ritningar i appendix \ref{sketches} för mer detaljer.
+
 \section{Resultat}
 \section{Diskussion och slutsats}
 
 \pagebreak
 \begin{appendix}
-\section{Källkod}
+\section{Källkod} \label{code}
 \subsection{othello\_bot.ino}
 \lstinputlisting{../../othello_bot/othello_bot.ino}
 \subsection{game.hpp}
@@ -86,8 +178,20 @@ Elektromekanisk projekt går up på att bygga något mekanisk som omfamnar även
 \lstinputlisting{../../othello_bot/random.hpp}
 
 \section{Ritningar}
+\label{sketches}
 \subsection{Spelbräde}
+\begin{figure}[!h]\label{board}
+\centering
+\includegraphics[scale=0.6]{board}
+\caption{Ritning till spelbrädet}
+\end{figure}
+
 \subsection{Robotarm}
+\begin{figure}[!h]\label{arm}
+\centering
+\includegraphics[scale=0.6]{arm}
+\caption{Ritning till robotarmen}
+\end{figure}
 
 \section{Materiallista}
 \end{appendix}
