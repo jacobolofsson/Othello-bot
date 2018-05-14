@@ -41,35 +41,38 @@
 // Pins for motor controls
 #define CONF_SENSOR_PINS A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15
 #define CONF_SENSOR_PINS_V { CONF_SENSOR_PINS } 
-#define CONF_X_STEPPER_PINS 22,24,26,28
-#define CONF_Y_STEPPER_PINS 23,25,27,29
-#define CONF_Z_SERVO_PIN 30
-#define CONF_MAGNET_PIN 31
+#define CONF_X_STEPPER_PINS 22,24,26,28 // Not used when using AF-shield
+#define CONF_Y_STEPPER_PINS 23,25,27,29 // Not used when using AF-shield
+#define CONF_Z_SERVO_PIN    10
+#define CONF_MAGNET_PIN_NEG 20
+#define CONF_MAGNET_PIN_POS 21
 
 // IO pins
-#define CONF_IO_BUTTON_PIN 2
-#define CONF_IO_SWITCH_PIN 3
-#define CONF_IDLE_LED_PIN 5
-#define CONF_READING_LED_PIN 6
-#define CONF_THINKING_LED_PIN 7
-#define CONF_MOVING_LED_PIN 8
-#define CONF_GAMEOVER_LED_PIN 9
-#define CONF_ERROR_LED_PIN 10
+#define CONF_IO_BUTTON_PIN    22
+#define CONF_IO_SWITCH_PIN    15 // Not used
+#define CONF_IDLE_LED_PIN     14 // Not used
+#define CONF_READING_LED_PIN  24
+#define CONF_THINKING_LED_PIN 26
+#define CONF_MOVING_LED_PIN   28
+#define CONF_GAMEOVER_LED_PIN 28
+#define CONF_ERROR_LED_PIN    28
 
 // Limits for sensors
 #define CONF_UPPER_SENS_LIM 800
 #define CONF_LOWER_SENS_LIM 200
 
 // Physical constants
-#define CONF_STEPPER_STEPS 100
-#define CONF_STEPPER_RPM 30
-#define CONF_MAX_STEPS 30
-#define CONF_SERVO_MAX 180
+#define CONF_STEPPER_STEPS   100
+#define CONF_STEPPER_RPM     30
+#define CONF_STEPPER_START_X 30
+#define CONF_STEPPER_START_Y 30
+#define CONF_MAX_STEPS       30
+#define CONF_SERVO_MAX       180
 
-#define CONF_BOARD_COL_SZ 4
-#define CONF_BOARD_ROW_SZ 4
-#define CONF_BOARD_W_MM 200
-#define CONF_BOARD_L_MM 200
+#define CONF_BOARD_COL_SZ      4
+#define CONF_BOARD_ROW_SZ      4
+#define CONF_BOARD_W_MM        200
+#define CONF_BOARD_L_MM        200
 #define CONF_STEPS_PER_COORD_X 100
 #define CONF_STEPS_PER_COORD_Y 100
 

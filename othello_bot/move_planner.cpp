@@ -18,8 +18,8 @@ void MovePlanner::write(void) {
                 // To get better control keep steps per call to a maximum
                 xSteps = constrain(targetX-currentX, -CONF_MAX_STEPS, CONF_MAX_STEPS);
                 ySteps = constrain(targetY-currentY, -CONF_MAX_STEPS, CONF_MAX_STEPS);
-                xMotor.step(xSteps);
-                yMotor.step(ySteps);
+                xMotor.step(xSteps, DOUBLE, FORWARD);
+                yMotor.step(ySteps, DOUBLE, FORWARD);
                 currentX += xSteps;
                 currentY += ySteps;
                 if ( (xSteps == 0) && (ySteps == 0) ) {
