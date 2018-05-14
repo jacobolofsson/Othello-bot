@@ -17,8 +17,8 @@ class MovePlanner {
         bool isDone(void);
 
     private:
-        AF_Stepper xMotor = Stepper(CONF_STEPPER_STEPS, 1);
-        AF_Stepper yMotor = Stepper(CONF_STEPPER_STEPS, 2);
+        AF_Stepper xMotor = AF_Stepper(CONF_STEPPER_STEPS, 1);
+        AF_Stepper yMotor = AF_Stepper(CONF_STEPPER_STEPS, 2);
         Servo zMotor = Servo();
 
         enum Action {MOVE_TO_TARGET, LOWER_ARM, RAISE_ARM, PICK_PIECE, DROP_PIECE};
@@ -34,6 +34,7 @@ class MovePlanner {
         int currentY = CONF_STEPPER_START_Y;
 
         void reset(void);
+	void writeMagnet(Magnet polarity);
 };
 
 #endif // MOVE_PLANNER_H

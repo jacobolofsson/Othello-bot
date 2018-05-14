@@ -43,7 +43,7 @@ void MovePlanner::write(void) {
                 break;
         };
     };
-    //TODO something with the magnet??
+    writeMagnet(currentPolarity);
 };        
 void MovePlanner::addMove(Coordinate c, Player p) {
     targetX = c.rowPos*CONF_STEPS_PER_COORD_X;
@@ -61,3 +61,15 @@ bool MovePlanner::isDone(void) {
     return currentActionId >= actQueueSize;
 };
 void MovePlanner::reset(void) {};
+void MovePlanner::writeMagnet(Magnet polarity) {
+    if(polarity == NEGATIVE) {
+        digitalWrite(CONF_MAGNET_PIN_NEG, HIGH);
+	digitalWrite(CONF_MAGNET_PIN_POS, LOW);
+    } else if(polarity == POSITIVE) {
+        digitalWrite(CONF_MAGNET_PIN_NEG, LOW);
+	digitalWrite(CONF_MAGNET_PIN_POS, HIGH);
+    } else {
+        digitalWrite(CONF_MAGNET_PIN_NEG, LOW);
+	digitalWrite(CONF_MAGNET_PIN_POS, LOW);
+    };
+};
