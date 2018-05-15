@@ -56,7 +56,7 @@ Detta drag utförs sedan med en robotarm som flyttar sig längs en bana ovanför
 Spelet \textit{Reversi} uppfanns på 1880-talet i london och har sedan dess spritt sig runt hela världen.
 Idag är spelet mer känt vid namnet \textit{Othello}.
 
-\subsubsection{Spelregler}
+\subsubsection*{Spelregler}
 Spelet spelas av två spelare, hädanefter svart och vit.
 Spelplanen är normalt ett bräde indelat i 8x8 rutor men kan spelas med ett mindre eller större antal rutor.
 Spelpjäserna är svarta på ena sidan och vita på den andra.
@@ -168,20 +168,16 @@ Därigenom kunde endast 8stycken spelpjäser nås i nuvarande konfiguration.
 
 \subsubsection*{Elektromagnet}
 Elektromagneten gjordes av en spik som lindades med koppartråd.
-Då denna måste kunna vända polaritet beroende på vilken sida av magneten som är uppåt samt även slås av och på så var planen att koppla in en två stycken relän som i konfigurationen som ses i figur xx. Att just relän användes var på grund av att Arduinon inte kan leverera tillräckligt mycket ström för att producera tillräckligt kraftigt magnetfält utan en extern strömförsöjning måste utnyttjas.
+Då denna måste kunna vända polaritet beroende på vilken sida av magneten som är uppåt samt även slås av och på så var planen att koppla in en två stycken relän som i konfigurationen som ses i figur xx.
+Att just relän användes var på grund av att Arduinon inte kan leverera tillräckligt mycket ström för att producera tillräckligt kraftigt magnetfält utan en extern strömförsöjning måste utnyttjas.
 Denna elektromagnet måste kunna lyftas upp ovanför resterade spelpjäser för att inte påverka dessa med magneterna.
-Detta genomfördes med ett servo som med hjälp av att linda upp en tråd kan höja elektromagneten, ses i figur \ref{servo_fram} och \ref{elektromagnet}.
+Detta genomfördes med ett servo som med hjälp av att linda upp en tråd kan höja elektromagneten, ses i figur \ref{servo_fram}.
 Elektromagneten testades och kunde uppnå önskat resultat, dock har inte lösningen med relän implementerats ännu.
 \begin{figure}\label{servo_fram}
 \centering
-\includegraphics[width=\textwidth,keepaspectratio]{../images/servo_fram}
-\caption{Servot för höjning och sänkning av elektromagneten.}
-\end{figure}
-
-\begin{figure}\label{elektromagnet}
-\centering
-\includegraphics[width=\textwidth,keepaspectratio]{../images/elektromagnet}
-\caption{Spelplan med en pjäs upplockad av elektromagneten}
+\includegraphics[width=0.4\textwidth,keepaspectratio]{../images/servo_fram}
+\includegraphics[width=0.4\textwidth,keepaspectratio]{../images/elektromagnet}
+\caption{Vänster: Servot för höjning och sänkning av elektromagneten. Höger: Spelplan med en pjäs upplockad av elektromagneten}
 \end{figure}
 
 \subsubsection*{Spelplan och sensorer}
@@ -201,25 +197,33 @@ Om spelpjäsen placeras med mer än 1cm avvikelse från tänkt position kommer s
 
 
 \section{Diskussion och slutsats}
-Vi lyckades till viss del bygga en Othellospelande robot. Ställningen blev klar och kunde nå cirka hälften av spelplanerna innan friktionen blev för stor och stegmotorn inte orkade med rörelsen. Om vi skulle gjort något annorlunda hade det varit att öka precisionen så att hålen där stängerna går igenom inte fastnar. Högre precistion skulle även möjligöra för noggrannare placering av spelpjäser. Ett annat material än metall hade även kunnat användas vid vinkellisterna så att friktionen mellan dessa och metallplattorna minskas. Alternativt hade även en kraftigare stegmotor kunnat utnyttjas, alternativt en strömförsörjning till stegmotorerna med högre spänning än den vi hade att tillgå och vi skulle då kunna kontrollera hela spelplanen.
+Vi lyckades till viss del bygga en Othellospelande robot.
+Ställningen blev klar och kunde nå cirka hälften av spelplanerna innan friktionen blev för stor och stegmotorn inte orkade med rörelsen.
+Om vi skulle gjort något annorlunda hade det varit att öka precisionen så att hålen där stängerna går igenom inte fastnar.
+Högre precistion skulle även möjligöra för noggrannare placering av spelpjäser.
+Ett annat material än metall hade även kunnat användas vid vinkellisterna så att friktionen mellan dessa och metallplattorna minskas.
+Alternativt hade även en kraftigare stegmotor kunnat utnyttjas, alternativt en strömförsörjning till stegmotorerna med högre spänning än den vi hade att tillgå och vi skulle då kunna kontrollera hela spelplanen.
 \\
 \\
-Programmeringen med styrning och AI blev till stor del klar, dock ej testad i verkligheten eller kalibrerad. Om man hade färdigställt hårdvaran tidigare skulle vi haft tid att kalibrera pjäskoordinaterna och därigenom kunnat köra programmet i verkligheten. 
+Programmeringen med styrning och AI blev till stor del klar, dock ej testad i verkligheten eller kalibrerad.
+Om man hade färdigställt hårdvaran tidigare skulle vi haft tid att kalibrera pjäskoordinaterna och därigenom kunnat köra programmet i verkligheten. 
 \\
 \\
 Spelplanen var den del som fungerade bäst, denna kunde känna av spelpjäserna och vilken av sidorna som var uppåt.
 \\
 \\
 Vid vidare utveckling är dessa några funktioner man skulle kunna lägga till efter grundfunktionerna fungerar: 
-1. Möjlighet att välja färg på AI:t
-1. Efter AI:t utfört ett drag vänder den alla pjäser som blir påverkade av draget
-1. Mekanismen plockar upp nya pjäser utan mänsklig hjälp
-1. AI:n gör "smarta" drag
-1. Möjlighet att ställa in betänketid och/eller svårighetsgrad
-1. Display som kan visa mer information om state
-1. AI:t känner av när motståndaren utfört sitt drag och fortsätter automatiskt med sitt drag utan input
-1. Möjlighet att ha två olika AI:n som spelar mot varandra
-1. Bygga två stycken robotar som spelar mot varandra
+\begin{itemize}
+    \item Möjlighet att välja färg på AI:t
+    \item Efter AI:t utfört ett drag vänder den alla pjäser som blir påverkade av draget
+    \item Mekanismen plockar upp nya pjäser utan mänsklig hjälp
+    \item AI:n gör "smarta" drag
+    \item Möjlighet att ställa in betänketid och/eller svårighetsgrad
+    \item Display som kan visa mer information om state
+    \item AI:t känner av när motståndaren utfört sitt drag och fortsätter automatiskt med sitt drag utan input
+    \item Möjlighet att ha två olika AI:n som spelar mot varandra
+    \item Bygga två stycken robotar som spelar mot varandra
+\end{itemize}
 
 \pagebreak
 \begin{appendix}
