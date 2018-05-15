@@ -154,7 +154,12 @@ Se ritningar i appendix \ref{sketches} för mer detaljer.
 \section{Resultat}
 \subsection{Konstruktion}
 \subsubsection*{Ställning}
-Förflyttningen skapades genom att bygga en ställning av metallstängerstänger. Vinkellister sågades av och användes för att ställningar som höll ihop dessa metallstänger och även agera som plattform för att sätta fast elektromagnet, servo och stegmotor på mittenplattan. Styrningen skapades genom att koppla ihop två metallstänger på var sin sida om ställningen där ena var kopplad till en stegmotor. Detta kan ses i figur \ref{board_uppe}. Ställningen kunde röra sig till viss del men på grund av friktion i ställningen orkade inte stegmotorerna att röra sig hela vägen till ändpunkterna. Därigenom kunde endast 8stycken spelpjäser nås i nuvarande konfiguration.
+Förflyttningen skapades genom att bygga en ställning av metallstängerstänger.
+Vinkellister sågades av och användes för att ställningar som höll ihop dessa metallstänger och även agera som plattform för att sätta fast elektromagnet, servo och stegmotor på mittenplattan.
+Styrningen skapades genom att koppla ihop två metallstänger på var sin sida om ställningen där ena var kopplad till en stegmotor.
+Detta kan ses i figur \ref{board_uppe}.
+Ställningen kunde röra sig till viss del men på grund av friktion i ställningen orkade inte stegmotorerna att röra sig hela vägen till ändpunkterna.
+Därigenom kunde endast 8stycken spelpjäser nås i nuvarande konfiguration.
 \begin{figure}\label{board_uppe}
 \centering
 \includegraphics[width=\textwidth,keepaspectratio]{../images/board_uppe}
@@ -162,7 +167,11 @@ Förflyttningen skapades genom att bygga en ställning av metallstängerstänger
 \end{figure}
 
 \subsubsection*{Elektromagnet}
-Elektromagneten gjordes av en spik som lindades med koppartråd. Då denna måste kunna vända polaritet beroende på vilken sida av magneten som är uppåt samt även slås av och på så var planen att koppla in en två stycken relän som i konfigurationen som ses i figur xx. Denna elektromagnet måste kunna lyftas upp ovanför resterade spelpjäser för att inte påverka dessa med magneterna. Detta genomfördes med ett servo som med hjälp av att linda upp en tråd kan höja elektromagneten, ses i figur \ref{servo_fram} och \ref{elektromagnet}. Elektromagneten testades och kunde uppnå önskat resultat, dock har inte lösningen med relän implementerats ännu.
+Elektromagneten gjordes av en spik som lindades med koppartråd.
+Då denna måste kunna vända polaritet beroende på vilken sida av magneten som är uppåt samt även slås av och på så var planen att koppla in en två stycken relän som i konfigurationen som ses i figur xx.
+Denna elektromagnet måste kunna lyftas upp ovanför resterade spelpjäser för att inte påverka dessa med magneterna.
+Detta genomfördes med ett servo som med hjälp av att linda upp en tråd kan höja elektromagneten, ses i figur \ref{servo_fram} och \ref{elektromagnet}.
+Elektromagneten testades och kunde uppnå önskat resultat, dock har inte lösningen med relän implementerats ännu.
 \begin{figure}\label{servo_fram}
 \centering
 \includegraphics[width=\textwidth,keepaspectratio]{../images/servo_fram}
@@ -175,15 +184,20 @@ Elektromagneten gjordes av en spik som lindades med koppartråd. Då denna måst
 \caption{Spelplan med en pjäs upplockad av elektromagneten}
 \end{figure}
 
-\subsubsection{Spelplan och sensorer}
-Spelplanen konstruerades genom att sensorerna monterades på ett kretskort i ett rutnät se figur \ref{board}.
+\subsubsection*{Spelplan och sensorer}
+Spelplanen konstruerades genom att sensorerna monterades på ett kretskort i ett rutnät, se figur \ref{board}.
 Kretskortet fästes sedan på undersidan av en 3mm tunn plastskiva.
 Sensorerna känner av spelpjäsernas magneter linjärt men magnetfältets täthet avtar snabbt med avståndet från sensorn.
 Detta gör att spelpjäsen måste placeras väldigt precist.
 Om spelpjäsen placeras med mer än 1cm avvikelse från tänkt position kommer sensorn inte klara av att känna av den.
+\begin{figure}\label{board}
+\centering
+\includegraphics[width=0.4\textwidth,keepaspectratio]{../images/spelplan_under}
+\includegraphics[width=0.4\textwidth,keepaspectratio]{../images/spelplan_under}
+\caption{Undersidan av kretskort med sensorer}
+\end{figure}
 
-
-\subsubsection{Mjukvara}
+\subsection{Mjukvara}
 
 
 \section{Diskussion och slutsats}
