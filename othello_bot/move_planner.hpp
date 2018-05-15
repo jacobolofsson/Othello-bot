@@ -4,7 +4,7 @@
 #include "config.hpp"
 #include "game.hpp"
 
-#include <Stepper.h>
+#include <AFMotor.h>
 #include <Servo.h>
 
 class MovePlanner {
@@ -17,8 +17,8 @@ class MovePlanner {
         bool isDone(void);
 
     private:
-        Stepper xMotor = Stepper(CONF_STEPPER_STEPS, CONF_X_STEPPER_PINS);
-        Stepper yMotor = Stepper(CONF_STEPPER_STEPS, CONF_Y_STEPPER_PINS);
+        AF_Stepper xMotor = AF_Stepper(CONF_STEPPER_STEPS, 1);
+        AF_Stepper yMotor = AF_Stepper(CONF_STEPPER_STEPS, 2);
         Servo zMotor = Servo();
 
         enum Action {MOVE_TO_TARGET, LOWER_ARM, RAISE_ARM, PICK_PIECE, DROP_PIECE};
@@ -29,11 +29,12 @@ class MovePlanner {
         int targetX;
         int targetY;
         enum Magnet targetPolarity;
-        enum Magnet currentPolarity;
-        int currentX;
-        int currentY;
+        enum Magnet currentPolarity = NEGATIVE;
+        int currentX = CONF_STEPPER_START_X;
+        int currentY = CONF_STEPPER_START_Y;
 
         void reset(void);
+	void writeMagnet(Magnet polarity);
 };
 
 #endif // MOVE_PLANNER_H

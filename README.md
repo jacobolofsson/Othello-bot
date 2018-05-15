@@ -20,3 +20,5 @@ make
 ./bench # Run benchmark
 ./play # Test to play against the AI in the terminal
 ```
+To use with arduino the library AF\_motor is used for the stepper motors. To build the whole project and upload to an arduino the library needs to be [downloaded](https://learn.adafruit.com/adafruit-motor-shield/library-install). The arduino also needs to have at least 16 analog pins (like arduino mega).
+When the library is installed the arduino IDE can be used to upload the project.

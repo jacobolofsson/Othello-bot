@@ -18,7 +18,7 @@ void IO::setup(void) {
 };
 // Outputs the current state by lighting corresponding LEDS
 void IO::write(const int state) {
-    DEBUG_STATE(state);
+//    DEBUG_STATE(state);
     for (int i = 0; i < N_LEDS; ++i) {
         digitalWrite(LED_PINS[i], LOW);
     };

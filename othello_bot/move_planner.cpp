@@ -18,8 +18,8 @@ void MovePlanner::write(void) {
                 // To get better control keep steps per call to a maximum
                 xSteps = constrain(targetX-currentX, -CONF_MAX_STEPS, CONF_MAX_STEPS);
                 ySteps = constrain(targetY-currentY, -CONF_MAX_STEPS, CONF_MAX_STEPS);
-                xMotor.step(xSteps);
-                yMotor.step(ySteps);
+                xMotor.step(xSteps, DOUBLE, FORWARD);
+                yMotor.step(ySteps, DOUBLE, FORWARD);
                 currentX += xSteps;
                 currentY += ySteps;
                 if ( (xSteps == 0) && (ySteps == 0) ) {
@@ -47,7 +47,7 @@ void MovePlanner::write(void) {
                 break;
         };
     };
-    //TODO something with the magnet??
+    writeMagnet(currentPolarity);
 };        
 void MovePlanner::addMove(Coordinate c, Player p) {
     targetX = c.rowPos*CONF_STEPS_PER_COORD_X;
@@ -65,3 +65,15 @@ bool MovePlanner::isDone(void) {
     return currentActionId >= actQueueSize;
 };
 void MovePlanner::reset(void) {};
+void MovePlanner::writeMagnet(Magnet polarity) {
+    if(polarity == NEGATIVE) {
+        digitalWrite(CONF_MAGNET_PIN_NEG, HIGH);
+	digitalWrite(CONF_MAGNET_PIN_POS, LOW);
+    } else if(polarity == POSITIVE) {
+        digitalWrite(CONF_MAGNET_PIN_NEG, LOW);
+	digitalWrite(CONF_MAGNET_PIN_POS, HIGH);
+    } else {
+        digitalWrite(CONF_MAGNET_PIN_NEG, LOW);
+	digitalWrite(CONF_MAGNET_PIN_POS, LOW);
+    };
+};
