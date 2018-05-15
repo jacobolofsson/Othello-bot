@@ -75,14 +75,8 @@ AI:t ska kunna hämta tillräckligt med information för att göra ett drag som 
 \section{Teori}
 För att en robot ska kunna spela Othello måste den på något sätt kunna läsa av spelplanen, tänka fram ett bra drag och sedan fysiskt utföra draget.
 
-\subsection{Sensorer}
-För att kunna läsa av spelbrädet finns det många tillvägagångssätt.
-Eftersom en robot som ska spela othello måste veta om varje ruta på spelplanen antingen är tom, har en svart spelpjäs eller en vit spelpjäs på sig finns det 3 olika tillstånd för varje ruta.
-För detta ändamål lämpar sig någon form av linjär sensor som kan läsas av analogt bra.
-Sensorer kan då sättas vid varje ruta på spelplanen och kalibreras så att de är mättade åt ena hållet för en svart pjäs,  mättade åt andra hållet för en vit pjäs och någonstans mitt emellan när rutan är tom.
-
 \subsection{AI-algoritm} \label{AI}
-Ett vanligt sätt att bygga ett AI för att spela ett spel är att på något sätt bygga ett beslutsträd där alla möjliga dra utvärderas.
+Ett vanligt sätt att bygga ett AI för att spela ett spel är att på något sätt bygga ett beslutsträd där alla möjliga drag utvärderas.
 Denna sorts algoritm växer exponentiellt i både tids- och minneskomplexitet vilket gör att den inte lämpar sig särskilt bra för en resursbegränsad plattform som t.ex. en mikrokontroller.
 Därför har vi valt att använda oss av en Monte Carlo-metod.
 Monte Carlo-metoden går ut på att istället för att bygga ett stort träd simuleras spel utifrån den nuvarande uppställningen på planen med slumpmässiga drag.
@@ -105,6 +99,12 @@ Algoritmen kan sammanfattas i följande steg:
 \item Välj det drag som gett mest vinster i medelvärde
 \end{itemize}
 
+\subsection{Sensorer}
+För att kunna läsa av spelbrädet finns det många tillvägagångssätt.
+Eftersom en robot som ska spela othello måste veta om varje ruta på spelplanen antingen är tom, har en svart spelpjäs eller en vit spelpjäs på sig finns det 3 olika tillstånd för varje ruta.
+För detta ändamål lämpar sig någon form av linjär sensor som kan läsas av analogt bra.
+Sensorer kan då sättas vid varje ruta på spelplanen och kalibreras så att de är mättade åt ena hållet för en svart pjäs,  mättade åt andra hållet för en vit pjäs och någonstans mitt emellan när rutan är tom.
+
 \subsection{Robotarm}
 För att roboten ska kunna plocka upp en pjäs och sedan släppa den på rätt plats på spelplanen behövs tre frihetsgrader.
 Armen behöver kunna röra sig tvärsöver planen (två dimensioner) samt lyfta och sänka en pjäs den håller i.
@@ -116,10 +116,11 @@ Antingen är den i höjd för att plocka upp en spelpjäs eller så är den i h�
 \subsection{Mjukvara}
 Designen av mjukvaran är indelad i fem stycken moduler som ansvarar för sin egen del av designen och en toppnivå som knyter samman modulerna, se figur \ref{system_arch}.
 Se appendix \ref{code} för fullständig kod.
-\begin{figure}\label{system_arch}
+\begin{figure}
 \centering
-\includegraphics[scale=0.6]{system_arch}
-\caption{Den implementerade mjukvaruarkitekturen. Huvudmodulen \texttt{othello\_bot} kommunicerar med de andra undermodulerna. Det gemensamma interfacet \texttt{game} är sättet modulerna kommunicerar med varandra.}
+\includegraphics[width=0.7\textwidth]{system_arch}
+\caption{Den implementerade systemarkitekturen. Huvudmodulen \texttt{othello\_bot} kommunicerar med de andra undermodulerna. Det gemensamma interfacet \texttt{game} definierar objekten modulerna använder sig av.}
+\label{system_arch}
 \end{figure}
 
 \subsubsection*{game}
@@ -152,63 +153,81 @@ Elektromagneten kan sedan sänkas eller höjas med ett servo.
 Se ritningar i appendix \ref{sketches} för mer detaljer.
 
 \section{Resultat}
-\subsection{Konstruktion}
-\subsubsection*{Ställning}
-Förflyttningen skapades genom att bygga en ställning av metallstängerstänger.
-Vinkellister sågades av och användes för att ställningar som höll ihop dessa metallstänger och även agera som plattform för att sätta fast elektromagnet, servo och stegmotor på mittenplattan.
-Styrningen skapades genom att koppla ihop två metallstänger på var sin sida om ställningen där ena var kopplad till en stegmotor.
-Detta kan ses i figur \ref{board_uppe}.
-Ställningen kunde röra sig till viss del men på grund av friktion i ställningen orkade inte stegmotorerna att röra sig hela vägen till ändpunkterna.
-Därigenom kunde endast 8stycken spelpjäser nås i nuvarande konfiguration.
-\begin{figure}\label{board_uppe}
-\centering
-\includegraphics[width=\textwidth,keepaspectratio]{../images/board_uppe}
-\caption{Toppsidan av ställningen med spelplan under. Mitten ses elektromagentställningen med stegmotor för ena ledden. Andra ledden styrs av en stegmotor precis utanför bild ner till vänster.}
-\end{figure}
 
-\subsubsection*{Elektromagnet}
-Elektromagneten gjordes av en spik som lindades med koppartråd.
-Då denna måste kunna vända polaritet beroende på vilken sida av magneten som är uppåt samt även slås av och på så var planen att koppla in en två stycken relän som i konfigurationen som ses i figur xx.
-Att just relän användes var på grund av att Arduinon inte kan leverera tillräckligt mycket ström för att producera tillräckligt kraftigt magnetfält utan en extern strömförsöjning måste utnyttjas.
-Denna elektromagnet måste kunna lyftas upp ovanför resterade spelpjäser för att inte påverka dessa med magneterna.
-Detta genomfördes med ett servo som med hjälp av att linda upp en tråd kan höja elektromagneten, ses i figur \ref{servo_fram}.
-Elektromagneten testades och kunde uppnå önskat resultat, dock har inte lösningen med relän implementerats ännu.
-\begin{figure}\label{servo_fram}
-\centering
-\includegraphics[width=0.4\textwidth,keepaspectratio]{../images/servo_fram}
-\includegraphics[width=0.4\textwidth,keepaspectratio]{../images/elektromagnet}
-\caption{Vänster: Servot för höjning och sänkning av elektromagneten. Höger: Spelplan med en pjäs upplockad av elektromagneten}
-\end{figure}
+\subsection{Mjukvara}
+Efter kompilation tar programmet 6198b, 24\% av Arduino Megas dynamiska minne och all minnesallokering i programmet sker statiskt.
+AI:t spelar spelet enligt reglerna och gör inga triviala fel.
+Finns det ett drag som garanterar vinst väljer AI:t detta och finns det ett drag som garanterar förlust väljer AI:t det inte om andra val finns.
+Desto mer processorkraft och betänketid, desto bättre spelar AI:t.
+Tester gjorda på en \textit{2GHz Intel Core i7} uppmätte ca 40000 simuleringsiterationer per sekund (ca 50-klockcycler per iteration).
 
-\subsubsection*{Spelplan och sensorer}
+\subsection{Spelplan och sensorer}
 Spelplanen konstruerades genom att sensorerna monterades på ett kretskort i ett rutnät, se figur \ref{board}.
 Kretskortet fästes sedan på undersidan av en 3mm tunn plastskiva.
 Sensorerna känner av spelpjäsernas magneter linjärt men magnetfältets täthet avtar snabbt med avståndet från sensorn.
 Detta gör att spelpjäsen måste placeras väldigt precist.
 Om spelpjäsen placeras med mer än 1cm avvikelse från tänkt position kommer sensorn inte klara av att känna av den.
-\begin{figure}\label{board}
+\begin{figure}
 \centering
 \includegraphics[width=0.4\textwidth,keepaspectratio]{../images/spelplan_under}
 \includegraphics[width=0.4\textwidth,keepaspectratio]{../images/board_top}
 \caption{Vänster: Undersidan av kretskort med sensorer. Höger: Ovansida monterad under spelplanen.}
+\label{board}
 \end{figure}
 
-\subsection{Mjukvara}
+\subsection{Robotarm}
+Förflyttningen skapades genom att bygga en ställning av metallstängerstänger.
+Vinkellister tillverkades och användes som ställningar för att hålla ihop stängerna och även agera som plattform för att sätta fast elektromagnet, servo och stegmotor på den rörliga mittenplattan.
+Systemet drivs av en stegmotor som är fäst på en av två metallstänger på varje sida av banan.
+Stängerna är ihopkopplade med kughjul och remmar.
+Detta kan ses i figur \ref{board_uppe}.
+Ställningen kunde röra sig till viss del men på grund av friktion i ställningen orkade inte stegmotorerna att röra sig hela vägen till ändpunkterna.
+Därigenom kunde endast 8stycken spelpjäser nås i nuvarande konfiguration.
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth,keepaspectratio]{../images/board_uppe}
+\caption{Toppsidan av ställningen med spelplan under. Mitten ses elektromagentställningen med stegmotor för ena ledden. Andra ledden styrs av en stegmotor precis utanför bild ner till vänster.}
+\label{board_uppe}
+\end{figure}
 
+\subsection{Elektromagnet}
+Elektromagneten gjordes av en spik som lindades med koppartråd.
+För att kunna lyfta en spelpjäs, hålla den och sedan släppa den genom att byta polaritet krävdes ca 2A vid 5V åt båda riktningarna.
+Eftersom elektromagnetet måste kunna vända polaritet och leverera mycket ström kopplades båda ändarna av spolen till var sitt relä.
+Reläna kan sedan styras som visas av konfigurationen i figur \ref{relay}.
+\begin{figure}
+\centering
+\includegraphics[width=0.4\textwidth,keepaspectratio]{../images/servo_fram}
+\includegraphics[width=0.4\textwidth,keepaspectratio]{../images/elektromagnet}
+\caption{Vänster: Servot för höjning och sänkning av elektromagneten. Höger: Spelplan med en pjäs upplockad av elektromagneten}
+\label{servo_fram}
+\end{figure}
+\begin{figure}
+\centering
+%\includegraphics[width=0.4\textwidth,keepaspectratio]{../Drawings/relay}
+\caption{Kretsschema för styrningen av elektromagnetens spole}
+\label{relay}
+\end{figure}
 
 \section{Diskussion och slutsats}
-Vi lyckades till viss del bygga en Othellospelande robot.
-Ställningen blev klar och kunde nå cirka hälften av spelplanerna innan friktionen blev för stor och stegmotorn inte orkade med rörelsen.
-Om vi skulle gjort något annorlunda hade det varit att öka precisionen så att hålen där stängerna går igenom inte fastnar.
-Högre precistion skulle även möjligöra för noggrannare placering av spelpjäser.
-Ett annat material än metall hade även kunnat användas vid vinkellisterna så att friktionen mellan dessa och metallplattorna minskas.
-Alternativt hade även en kraftigare stegmotor kunnat utnyttjas, alternativt en strömförsörjning till stegmotorerna med högre spänning än den vi hade att tillgå och vi skulle då kunna kontrollera hela spelplanen.
+Utan att ha något formaliserat ramverk för att testa vad en bra othellospelare innebär är det inte möjligt att ge något absolut svar på hur bra AI:t fungerar.
+Det som går att säga utifrån resultaten är att den spelar bättre än någon som bara lägger slumpmässigt. Då denna implementation inte är begränsad av minne ifall en Arduino Mega används som mikrokontroller skulle det gå att optimera programmet mer med avsseende på prestanda då Adruinos kompilator automatiskt optimerar för minnesanvändning ifall AI:t behöver göras bättre.
 \\
 \\
-Programmeringen med styrning och AI blev till stor del klar, dock ej testad i verkligheten eller kalibrerad.
-Om man hade färdigställt hårdvaran tidigare skulle vi haft tid att kalibrera pjäskoordinaterna och därigenom kunnat köra programmet i verkligheten. 
+En stor modifikation som gjordes från originalritningen var att ett 4x4 spelbräde valdes istället för 8x8 för att hålla komplexiteten av konstruktionen nere.
+Det finns inget som begränsar att konstruktionen skulle kunna utökas för ett större antal pjäser.
+Det i designen som behöver modifieras är hur sensorerna avläses.
+Ifall mikrokontrollern som används inte har tillräckligt många portar behövs en analog multiplexer användas  för att läsa av all sensorer.
 \\
 \\
+Den färdigkonstruerade armen hade tillräckligt med rörlighet för att nå alla pjäser men på grund ojämnheter och mätfel vid tillverkning av banorna blev det mycket hög friktion mellan de rörliga delarna när de kom långt bort från mittläget.
+Detta gör att stegmotorerna har för llitet vridmoment för att kunna övervinna friktionen och endast ca hälften av positionerna på brädet kan nås.
+Detta hade kunnat motverkas med större nogrannhet vid tillverkningen av banorna för armen.
+En större nogrannhet vid tillverkningen hade även kunnat möjligjort för högre precision vid robotens placering av pjäser.
+Andra alternativa sätt att överkomma friktionen är att använda material med mindre friktion för att tillverka glidlagren och att använda stegmotorer med högre vridmoment.
+\\
+\\
+Sensorerna i spelplanen fungerar bra men är väldigt känsliga för att pjäserna placeras med hög precision.
 Spelplanen var den del som fungerade bäst, denna kunde känna av spelpjäserna och vilken av sidorna som var uppåt.
 \\
 \\
@@ -216,13 +235,11 @@ Vid vidare utveckling är dessa några funktioner man skulle kunna lägga till e
 \begin{itemize}
     \item Möjlighet att välja färg på AI:t
     \item Efter AI:t utfört ett drag vänder den alla pjäser som blir påverkade av draget
-    \item Mekanismen plockar upp nya pjäser utan mänsklig hjälp
-    \item AI:n gör "smarta" drag
-    \item Möjlighet att ställa in betänketid och/eller svårighetsgrad
-    \item Display som kan visa mer information om state
+    \item Mekanismen plockar upp nya pjäser att lägga ut på planen utan mänsklig hjälp
+    \item AI:n gör smartare drag
+    \item Möjlighet att ställa in betänketid och/eller svårighetsgrad utan tillgång till källkoden
+    \item Display som kan visa mer information om programmets status
     \item AI:t känner av när motståndaren utfört sitt drag och fortsätter automatiskt med sitt drag utan input
-    \item Möjlighet att ha två olika AI:n som spelar mot varandra
-    \item Bygga två stycken robotar som spelar mot varandra
 \end{itemize}
 
 \pagebreak
@@ -255,25 +272,16 @@ Vid vidare utveckling är dessa några funktioner man skulle kunna lägga till e
 \subsection{random.hpp}
 \lstinputlisting{../../othello_bot/random.hpp}
 
-\section{Ritningar}
-\label{sketches}
+\section{Ritningar}\label{sketches}
 \subsection{Spelbräde}
-\begin{figure}[!h]\label{board}
-\centering
-\includegraphics[scale=0.6]{board}
-\caption{Ritning till spelbrädet}
-\end{figure}
+\includegraphics[width=\textwidth]{board}
 
-\subsection{Robotarm}
-\begin{figure}[!h]\label{arm}
-\centering
-\includegraphics[scale=0.6]{arm}
-\caption{Ritning till robotarmen}
-\end{figure}
+\subsection{Robotarm}\label{arm}
+\includegraphics[width=\textwidth]{arm}
 
 \section{Materiallista}
-    \begin{table}
-        \begin{tabular}{ | c | c | c | }
+    \centering
+        \begin{tabular}{ | l | l | r | }
 \hline
 Del & Benämning & Antal/storlek \\
 \hline
@@ -310,7 +318,6 @@ Del & Benämning & Antal/storlek \\
 3.4.2 & Mutter 5mm & 6st \\
 \hline
         \end{tabular}
-    \end{table}
 
 \end{appendix}
 
