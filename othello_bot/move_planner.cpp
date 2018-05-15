@@ -37,9 +37,13 @@ void MovePlanner::write(void) {
                 break;
             case PICK_PIECE:
                 currentPolarity = targetPolarity;
+                // TODO delay here?
+                currentActionId++;
                 break;
             case DROP_PIECE:
                 currentPolarity = (targetPolarity == NEGATIVE) ? POSITIVE : NEGATIVE;
+                // TODO delay here?
+                currentActionId++;
                 break;
         };
     };
