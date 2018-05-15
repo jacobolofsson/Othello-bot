@@ -83,7 +83,7 @@ Sensorer kan då sättas vid varje ruta på spelplanen och kalibreras så att de
 
 \subsection{AI-algoritm} \label{AI}
 Ett vanligt sätt att bygga ett AI för att spela ett spel är att på något sätt bygga ett beslutsträd där alla möjliga dra utvärderas.
-Denna sorts algoritm växer exponentiellt i både tids- och minneskomplexitet vilket gör att den inte lämpar sig särskilt bra för en resursbegränsad platform som t.ex en mikrokontroller.
+Denna sorts algoritm växer exponentiellt i både tids- och minneskomplexitet vilket gör att den inte lämpar sig särskilt bra för en resursbegränsad plattform som t.ex. en mikrokontroller.
 Därför har vi valt att använda oss av en Monte Carlo-metod.
 Monte Carlo-metoden går ut på att istället för att bygga ett stort träd simuleras spel utifrån den nuvarande uppställningen på planen med slumpmässiga drag.
 Programmet håller räkningen på vinster och förluster och väljer sedan det drag som i genomsnitt lett till flest vinster bland de slumpade spelen.
@@ -153,11 +153,18 @@ Se ritningar i appendix \ref{sketches} för mer detaljer.
 
 \section{Resultat}
 \subsection{Konstruktion}
-Sensorerna känner magneter, men de är väldigt känsliga. Måste typ ligga rätt på.
+%Thomas del här
 
-måste ha hög precision i armen.
-Dåligt glid, bitarna måste passa ihop mer precist. Stegmotorerna för svaga
-Elektromagneten klarar att hålla en spelpjäs och framförallt att skjuta ifrån den.
+\subsubsection{Spelplan och sensorer}
+Spelplanen konstruerades genom att sensorerna monterades på ett kretskort i ett rutnät se figur \ref{board}.
+Kretskortet fästes sedan på undersidan av en 3mm tunn plastskiva.
+Sensorerna känner av spelpjäsernas magneter linjärt men magnetfältets täthet avtar snabbt med avståndet från sensorn.
+Detta gör att spelpjäsen måste placeras väldigt precist.
+Om spelpjäsen placeras med mer än 1cm avvikelse från tänkt position kommer sensorn inte klara av att känna av den.
+
+
+\subsubsection{Mjukvara}
+
 
 \section{Diskussion och slutsats}
 Funktioner att lägga till:
