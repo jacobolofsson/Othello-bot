@@ -52,12 +52,11 @@ Detta drag utförs sedan med en robotarm som flyttar sig längs en bana ovanför
 \pagenumbering{arabic}
 
 \section{Introduktion}
+\subsection{Othello}
 Spelet \textit{Reversi} uppfanns på 1880-talet i london och har sedan dess spritt sig runt hela världen.
 Idag är spelet mer känt vid namnet \textit{Othello}.
 
-Målet med detta projekt är att att konstruera en robot som kan spela Othello mot en människa.
-
-\subsection{Spelregler}
+\subsubsection{Spelregler}
 Spelet spelas av två spelare, hädanefter svart och vit.
 Spelplanen är normalt ett bräde indelat i 8x8 rutor men kan spelas med ett mindre eller större antal rutor.
 Spelpjäserna är svarta på ena sidan och vita på den andra.
@@ -68,6 +67,10 @@ När en pjäs placeras ut ska alla av motspelarens pjäser som ligger i raka lin
 Ett drag är endast tillåtet om minst en av motståndarens pjäser vänds av draget.
 Ifall det inte finns några möjliga drag måste spelaren passa sin tur tills det finns ett möjligt drag att göra.
 När ingen kan göra några fler drag är spelet slut och den spelare med mest pjäser på brädet vinner.
+
+\subsection{Mål}
+Målet med detta projekt är att att konstruera en robot och ett AI som kan spela Othello mot en mänsklig motståndare.
+AI:t ska kunna hämta tillräckligt med information för att göra ett drag som är tillåtet enligt spelets regler.
 
 \section{Teori}
 För att en robot ska kunna spela Othello måste den på något sätt kunna läsa av spelplanen, tänka fram ett bra drag och sedan fysiskt utföra draget.
@@ -150,8 +153,23 @@ Se ritningar i appendix \ref{sketches} för mer detaljer.
 
 \section{Resultat}
 \subsection{Konstruktion}
+Sensorerna känner magneter, men de är väldigt känsliga. Måste typ ligga rätt på.
+
+måste ha hög precision i armen.
+Dåligt glid, bitarna måste passa ihop mer precist. Stegmotorerna för svaga
+Elektromagneten klarar att hålla en spelpjäs och framförallt att skjuta ifrån den.
 
 \section{Diskussion och slutsats}
+Funktioner att lägga till:
+1. Möjlighet att välja färg på AI:t
+1. Efter AI:t utfört ett drag vänder den alla pjäser som blir påverkade av draget
+1. Mekanismen plockar upp nya pjäser utan mänsklig hjälp
+1. AI:n gör "smarta" drag
+1. Möjlighet att ställa in betänketid och/eller svårighetsgrad
+1. Display som kan visa mer information om state
+1. AI:t känner av när motståndaren utfört sitt drag och fortsätter automatiskt med sitt drag utan input
+1. Möjlighet att ha två olika AI:n som spelar mot varandra
+1. Bygga två stycken robotar som spelar mot varandra
 
 \pagebreak
 \begin{appendix}
